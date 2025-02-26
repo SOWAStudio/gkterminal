@@ -1,0 +1,301 @@
+.location {
+    position: relative;
+    z-index: 2;
+
+    &__enterprises {
+        margin-top: 24px;
+    }
+
+    &__subtitle {
+        color: $colorMain;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        margin-bottom: 20px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid $colorMain;
+    }
+
+    &__list {
+        @include tablet {
+            .swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(auto, 338px));
+                gap: 32px;
+                justify-content: start;
+            }
+
+            .swiper-slide {
+                width: auto;
+                max-width: 100%;
+            }
+
+            .swiper-pagination {
+                display: none;
+            }
+        }
+
+        @include mobile {
+            .swiper-wrapper {
+                grid-template-columns: repeat(auto-fit, minmax(auto, 286px));
+            }
+        }
+
+        @include only-mobile {
+            .swiper-wrapper {
+                grid-template-columns: repeat(auto-fit, minmax(auto, 218px));
+            }
+        }
+
+        @include xs-mobile {
+            .swiper-wrapper {
+                display: flex;
+            }
+            
+            .swiper-slide {
+                width: calc(50% - 8px) !important;
+                flex-shrink: 0;
+            }
+        }
+
+        @media screen and (width: 375px) {
+            .swiper-wrapper {
+                display: flex;
+            }
+            
+            .swiper-slide {
+                width: calc(50% - 8px) !important;
+                flex-shrink: 0;
+            }
+
+            .location__item {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            .location__name {
+                justify-content: flex-start;
+                margin-bottom: 4px;
+                white-space: normal;
+                flex-wrap: wrap;
+            }
+
+            .location__address {
+                text-align: left;
+            }
+        }
+
+        @include only-mobile {
+            .swiper-pagination {
+                flex-direction: row;
+                position: static;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 32px;
+                gap: 8px;
+                padding: 0;
+
+                &-bullet {
+                    width: 6px;
+                    height: 6px;
+                    margin: 0;
+                    background-color: rgba($colorWhite, 32%);
+                    opacity: 1;
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+                    pointer-events: auto;
+
+                    &-active {
+                        background-color: $colorMain !important;
+                    }
+                }
+            }
+        }
+
+        &--complexes {
+            @include tablet {
+                .swiper-slide {
+                    width: auto;
+                }
+            }
+
+            // Скрываем пагинацию для комплексов на мобильных устройствах
+            @include mobile {
+                .swiper-pagination {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        min-width: auto;
+
+        @include max-desktop {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+        }
+
+        @include min-desktop {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        @include xs-mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__info {
+        flex-grow: 1;
+
+        @include max-desktop {
+            width: 100%;
+        }
+
+        @include min-desktop {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+        white-space: nowrap;
+
+        @include max-desktop {
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        @include min-desktop {
+            justify-content: flex-start;
+            margin-bottom: 0;
+        }
+
+        @include xs-mobile {
+            justify-content: flex-start;
+            margin-bottom: 4px;
+            white-space: normal;
+            flex-wrap: wrap;
+        }
+
+        span {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 136%;
+            letter-spacing: 0.18px;
+        }
+    }
+
+    &__website {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+
+        &:hover {
+            color: $colorMain;
+        }
+    }
+
+    &__address {
+        @include max-desktop {
+            text-align: center;
+        }
+
+        @include min-desktop {
+            text-align: left;
+        }
+
+        @include xs-mobile {
+            text-align: left;
+        }
+    }
+
+    // Скрываем кнопки навигации для этих слайдеров
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+
+    &__map {
+        width: 100%;
+        height: 600px;
+        margin-top: 32px;
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .map-balloon {
+        padding: 16px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+
+        &__logo {
+            width: 64px;
+            height: 64px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        &__content {
+            flex-grow: 1;
+        }
+
+        &__name {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            margin-bottom: 8px;
+        }
+
+        &__address {
+            font-size: 14px;
+            line-height: 140%;
+            color: rgba($colorBlack, 0.6);
+        }
+    }
+}

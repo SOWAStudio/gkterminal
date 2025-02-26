@@ -1,0 +1,18 @@
+/*
+@import 'node_modules/swiper/swiper';
+@import 'swiper/swiper-bundle.css';
+*/
+
+// Core Swiper styles
+@import 'swiper/css';
+
+// Required modules
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/effect-fade';
+@import 'swiper/css/autoplay';
+
+
+//@import 'node_modules/swiper/swiper';
+//@import 'node_modules/swiper/modules/pagination';
+//@import 'node_modules/swiper/modules/navigation';

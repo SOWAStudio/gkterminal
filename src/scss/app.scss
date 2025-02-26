@@ -1,0 +1,41 @@
+/* Core variables */
+@import 'base/variables';
+
+/* CSS Reset */
+@import 'base/reset';
+
+/* Fonts */
+@import 'base/fonts';
+@import 'base/icon';
+
+/* Mixins, helpers and functions */
+@import 'base/mediaqueries';
+@import 'base/extends';
+@import "base/typographic";
+@import 'base/helper';
+@import 'base/base';
+@import "base/flex-grid";
+
+/* Libraries */
+@import "libraries/swiper";
+
+/* Layout and UI-elements */
+@import 'ui/buttons';
+@import 'ui/input';
+@import 'ui/swiper';
+
+/* Components */
+@import 'components/header';
+@import 'components/footer';
+@import 'components/main-block';
+@import 'components/company-group';
+@import 'components/current-construction';
+@import 'components/production-complex';
+@import 'components/location';
+@import "components/map";
+@import "components/feedback";
+@import "components/modal";
+
+html {
+    overflow-x: hidden;
+}

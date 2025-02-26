@@ -1,0 +1,109 @@
+.button {
+  font-family: $fontBase;
+  color: $colorWhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  padding: 14px 30px;
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 64px;
+  text-decoration: none;
+  text-outline: none;
+  cursor: pointer;
+  box-shadow: none;
+  user-select: none;
+  overflow: hidden;
+  position: relative;
+  background: rgba(0, 15, 31, 0.32);
+  border: 2px solid var(--0076-bf, $colorMain);
+
+  &.with-icon {
+    padding: 14px 16px 14px 30px;
+
+    .button__text-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .button__text--hidden {
+      left: -16px;
+    }
+
+    .button__icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease-in-out;
+
+      svg {
+        width: 6px;
+        height: 8px;
+      }
+    }
+
+    &:hover {
+      .button__text--visible {
+        transform: translateY(-100%);
+      }
+
+      .button__text--hidden {
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  &-second {
+    @extend .button-second;
+  }
+
+  &-callback {
+    background: rgba(0, 15, 31, 0.32);
+    border: 2px solid var(--0076-bf, $colorMain);
+  }
+
+  &-callback-mobile {
+    padding: 14px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+  }
+
+  &__text-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  &__text {
+    display: block;
+    transition: transform 0.4s ease-in-out;
+
+    &--hidden {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &:hover {
+    .button__text--visible {
+      transform: translateY(-100%);
+    }
+
+    .button__text--hidden {
+      transform: translateY(-100%);
+    }
+  }
+}

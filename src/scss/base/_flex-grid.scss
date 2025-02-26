@@ -1,0 +1,103 @@
+.hide {
+  display: none !important;
+}
+
+.hide-desktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.hide-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.hide-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.hide-only-mobile {
+  @include only-mobile {
+    display: none !important;
+  }
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.no-margin-left {
+  margin-left: 0 !important;
+}
+
+.no-margin-right {
+  margin-right: 0 !important;
+}
+
+.margin-top-10 {
+  margin-top: 10px !important;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
+
+.text-align-center {
+  text-align: center !important;
+}
+
+.text-align-right {
+  text-align: right !important;
+}
+
+.text-align-left {
+  text-align: left !important;
+}
+
+.text-align-left-mobile {
+  @include mobile {
+    text-align: left!important;
+  }
+}
+
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.nobr {
+  white-space: nowrap;
+}

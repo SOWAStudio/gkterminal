@@ -1,0 +1,84 @@
+.desktop-h1-r {
+  font-family: $fontBase;
+  color: $colorWhite;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.desktop-h1-m {
+  @extend .desktop-h1-r;
+}
+
+.desktop-h2-m {
+  @extend .desktop-h1-r;
+  font-size: 56px;
+  line-height: 115%;
+}
+
+
+.body-1-m {
+  @extend .desktop-h1-r;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+.body-2-m {
+  @extend .desktop-h1-r;
+  font-size: 14px;
+  line-height: 116%;
+  letter-spacing: 0.14px;
+}
+
+.body-2-r {
+  font-family: $fontBase;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114%;
+  letter-spacing: 0.14px;
+  color: $colorWhite;
+}
+
+.button-second {
+  @extend .desktop-h1-r;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 128%;
+  letter-spacing: 0.16px;
+}
+
+.desktop-h4-r {
+  @extend .desktop-h1-r;
+  font-size: 34px;
+  line-height: 118%;
+}
+
+.desktop-h4-m {
+  @extend .desktop-h1-r;
+  font-size: 34px;
+  line-height: 118%;
+  font-weight: 500;
+}
+
+.desktop-h5-m {
+  @extend .desktop-h1-r;
+  font-size: 24px;
+  line-height: 134%;
+}
+
+.desktop-h6-r {
+  @extend .desktop-h1-r;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.subtitle-m {
+  @extend .desktop-h1-r;
+  font-size: 18px;
+  line-height: 136%;
+  letter-spacing: 0.18px;
+}
+
+

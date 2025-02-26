@@ -1,0 +1,370 @@
+$headerHeight: 96px;
+//$headerHeightMobile: 60px;
+
+.header-margin {
+  height: $headerHeight;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease-in;
+  width: 100%;
+  z-index: 801;
+  height: $headerHeight;
+  background: linear-gradient(180deg, rgba(0, 15, 31, 0.8) 0%, rgba(0, 15, 31, 0) 100%);
+  backdrop-filter: none;
+
+  .container {
+    height: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    display: block;
+    width: 190px;
+    height: 32px;
+    background: url("../img/logo.svg") center center no-repeat;
+    background-size: contain;
+    text-decoration: none;
+    outline: none;
+
+    @include mobile {
+      background: url("../img/logo-mobile.svg") center center no-repeat;
+      width: 81px;
+      height: 52px;
+    }
+  }
+
+  &__nav {
+    @include xxl-mobile {
+      display: none;
+    }
+
+    &-list {
+      align-items: center;
+      gap: 32px;
+      height: 100%;
+      justify-content: flex-start;
+      display: flex;
+    }
+
+    &-item {
+      position: relative;
+    }
+
+    &-link {
+      @extend .body-1-m;
+      text-decoration: none;
+      position: relative;
+      color: inherit;
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: white;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      &:hover {
+        color: white;
+
+        &::before {
+          width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  &__submenu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: -15px;
+    background: rgba(red($colorMain), green($colorMain), blue($colorMain), 0.8);
+    backdrop-filter: blur(8px);
+    padding: 12px 16px;
+    z-index: 1;
+
+    li {
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      @extend .body-2-m;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    .button-callback {
+      @include xxs-desktop {
+        display: none;
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      @include xxl-mobile {
+        display: block;
+      }
+
+      @include xl-mobile {
+        display: none;
+      }
+    }
+
+    .button-callback-mobile {
+
+      @include only-xxs-desktop {
+        display: none;
+      }
+
+      @include xxl-mobile {
+        display: none;
+      }
+
+      @include xl-mobile {
+        display: block;
+      }
+    }
+  }
+
+  &__burger {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: none;
+    cursor: pointer;
+    margin-left: 16px;
+
+    @include xxl-mobile {
+      display: block;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 2px;
+      background-color: currentColor;
+      transition: all 0.3s ease;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 24px;
+        height: 2px;
+        background-color: currentColor;
+        transition: all 0.3s ease;
+      }
+
+      &::before {
+        top: -8px;
+      }
+
+      &::after {
+        bottom: -8px;
+      }
+    }
+  }
+}
+
+.open-mobile-menu {
+  .header__burger {
+    span {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.burger {
+  &-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 15, 31, 0.8);
+    backdrop-filter: blur(16px);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 800;
+    transform: translateY(-100%);
+    opacity: 0;
+
+    &__wrapper {
+      padding-top: 80px;
+      height: calc(100vh - $headerHeight);
+      overflow-y: auto;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__item {
+      position: relative;
+    }
+
+    &__item-title-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+
+      .icon-chevron {
+        width: 13px;
+        height: 5px;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &__item-title {
+      @extend .desktop-h4-r;
+      color: $colorWhite;
+
+      @include only-mobile {
+        font-size: 24px;
+        line-height: 134%;
+      }
+    }
+
+    &__sub-list {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      margin: 0;
+      padding: 0;
+      margin-left: 24px;
+    }
+
+    &__sub-item {
+      margin-bottom: 16px;
+    }
+
+    &__sub-link {
+      @extend .desktop-h6-r;
+      color: $colorWhite;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      @include only-mobile {
+        font-size: 18px;
+        line-height: 136%;
+        letter-spacing: 0.18px;
+      }
+    }
+  }
+
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 799;
+  }
+}
+
+.open-mobile-menu {
+  overflow: hidden;
+
+  .header {
+    background: rgba(0, 15, 31, 0.8);
+    backdrop-filter: blur(16px);
+  }
+
+  .burger-menu {
+    transform: translateY(85px);
+    opacity: 1;
+  }
+
+  .burger-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header__burger {
+    span {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .burger-menu__item {
+    &.active {
+      .icon-chevron {
+        transform: rotate(180deg);
+      }
+
+      .burger-menu__sub-list {
+        margin-top: 32px;
+        height: auto;
+        opacity: 1;
+      }
+    }
+  }
+}

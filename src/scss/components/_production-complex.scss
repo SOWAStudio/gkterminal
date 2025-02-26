@@ -1,0 +1,219 @@
+.production-complex {
+    position: relative;
+    padding: 180px 0;
+    z-index: 2;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // background: rgba(0, 15, 31, 0.78);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    @include mobile  {
+        padding-bottom: 64px;
+        padding-top: 128px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        background-image: url('../img/production-complex/complex-mask.png');
+    }
+    &__container {
+        position: relative;
+    }
+    &__content {
+        position: relative;
+        z-index: 5;
+        @media (min-width: $xs-desktop) {
+            display: grid;
+            align-items: start;
+            column-gap: 32px;
+            grid-template-columns: repeat(12, minmax(0px, 1fr));
+        }
+        @media (max-width: $xs-desktop) {
+            display: flex;
+            flex-direction: column;
+            row-gap: 32px;
+        }
+    }
+    &__heading {
+        grid-column: 5 span;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: 32px;
+        @media (max-width: $sm-desktop) {
+            grid-column: 6 span;
+        }
+        @media (min-width: $desktop) {
+            max-width: 585px;
+        }
+    }
+    &__title {
+        @include mobile {
+            max-width: 585px;
+        }
+    }
+    &__description {
+        & > *,
+        &--hidden > * {
+            letter-spacing: 0.01em;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 128%;
+            &.bolder {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 136%;
+            }
+            &:not(:last-child):not(:nth-last-child(2)) {
+                margin-bottom: 24px;
+            }
+        }
+        &--hidden {
+            display: none;
+            margin-top: 32px;
+        }
+    }
+    &__link {
+        position: relative;
+        width: max-content;
+        margin: 0;
+        @include xl-mobile {
+            width: 100%;
+        }
+        &::after {
+            content: "";
+            width: 24px;
+            height: 24px;
+            margin-left: 8px;
+            display: block;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5001 5.13604V17.864M12.5001 17.864L6.13609 11.5M12.5001 17.864L18.864 11.5' stroke='white' stroke-width='2' stroke-linecap='round' /%3E%3C/svg%3E");
+            transition: transform .4s ease-in-out;
+            margin-right: -16px;
+        }
+        .button__text {
+            font-size: 16px;
+        }
+        &.is-active {
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__stats {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+        &-item {
+            font-size: 34px;
+            line-height: 118%;
+            @include xl-mobile {
+                font-size: 24px;
+            }
+        }
+    }
+    &__slider {
+        position: sticky !important;
+        top: 25%;
+        width: 100%;
+
+        grid-column: 7 span;
+        transition: top .3s ease-in-out;
+        @media (max-width: $sm-desktop) {
+            grid-column: 6 span;
+        }
+        .swiper-wrapper {
+            height: 450px;
+            padding-bottom: 64px;
+            @include mm-desktop {
+                height: 330px;
+            }
+            @include mobile {
+                height: 397px;
+            }
+            @include only-mobile {
+                height: 310px;
+            }
+            @include xl-mobile {
+                height: 184px;
+            }
+        }
+        &-nav {
+            display: flex;
+            align-items: center;
+            column-gap: 24px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    .swiper-pagination {
+        @include xl-mobile {
+            margin-top: -45px;
+        }
+    }
+}
+
+// Добавляем новый класс-обертку
+.production-sections-wrapper {
+    position: relative;
+    background-image: url('../img/production-complex/bg.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 27, 55, 0.75);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    // Добавляем затемнение для секций "Это мы строим" и "Карта"
+    .current-construction,
+    .location {
+        position: relative;
+
+        // Контент должен быть над затемнением
+        //&__container,
+        //.container,
+        .section__heading,
+        .swiper,
+        .map-container {
+            position: relative;
+            z-index: 3;
+        }
+
+        // Дополнительное затемнение под контентом
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 15, 31, 0.8);
+            pointer-events: none;
+            z-index: 2;
+        }
+    }
+}

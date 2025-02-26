@@ -1,0 +1,78 @@
+{
+  "author": "Internetlab",
+  "name": "KPK",
+  "version": "1.0.0",
+  "description": "KPK",
+  "homepage": "",
+  "browserslist": [
+    "last 2 versions",
+    "> 5%"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.2",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint": "^8.28.0",
+    "html-webpack-plugin": "^5.5.0",
+    "inputmask": "^5.0.7",
+    "jquery": "^3.6.1",
+    "lozad": "^1.16.0",
+    "mini-css-extract-plugin": "^2.7.0",
+    "postcss": "^8.4.19",
+    "postcss-loader": "^7.0.1",
+    "prettier": "^2.8.0",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.56.1",
+    "sass-lint": "^1.13.1",
+    "sass-loader": "^13.2.0",
+    "svg-sprite-loader": "^6.0.11",
+    "svgo": "^3.0.2",
+    "terser-webpack-plugin": "^5.3.6",
+    "webpack": "^5.75.0",
+    "webpack-bundle-analyzer": "^4.7.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "engines": {
+    "node": "^12 || >=14"
+  },
+  "keywords": [
+    "webpack",
+    "boilerplate",
+    "template",
+    "setup"
+  ],
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "webpack --env mode=production && prettier --print-width=120 --parser html --write dist/*.html",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack serve --env mode=development --open"
+  },
+  "target": "web",
+  "dependencies": {
+    "accordion-js": "^3.3.2",
+    "bowser": "^2.11.0",
+    "compression-webpack-plugin": "^10.0.0",
+    "cssnano-webpack-plugin": "^1.0.3",
+    "dayjs": "^1.11.7",
+    "devbridge-autocomplete": "^1.4.11",
+    "device-detector-js": "^3.0.3",
+    "hammerjs": "^2.0.8",
+    "html-loader": "^4.2.0",
+    "ion-rangeslider": "^2.3.1",
+    "js-cookie": "^3.0.5",
+    "moment": "^2.29.4",
+    "preload-webpack-plugin": "^2.3.0",
+    "smooth-scrollbar": "^8.8.1",
+    "svg-pan-zoom": "ariutta/svg-pan-zoom",
+    "swiper": "^11.2.4",
+    "webpack-livereload-plugin": "^3.0.2"
+  }
+}

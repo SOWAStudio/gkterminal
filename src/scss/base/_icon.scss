@@ -1,0 +1,20 @@
+.icon {
+  display: block;
+  transition: transform 0.3s ease-in-out;
+
+  &-chevron {
+    width: 9px;
+    height: 5px;
+    background: url('../img/icons/icon-chevron.svg') 50% / cover no-repeat;
+
+    &--active {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-call {
+    width: 20px;
+    height: 20px;
+    background: url('../img/icons/icon-call.svg') 50% / cover no-repeat;
+  }
+}

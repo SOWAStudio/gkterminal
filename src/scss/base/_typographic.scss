@@ -1,0 +1,75 @@
+@import "extends";
+@import "variables";
+@import "mediaqueries";
+
+:root {
+  --viewport-height: 100%;
+}
+
+a, .link {
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.section {
+  display: block;
+  margin: 0;
+  flex: 1 0 auto;
+
+  &--map {
+    padding: 0;
+    height: 730px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  // @include mobile {
+  //   padding: 20px 0;
+  // }
+  &__title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 115%;
+    color: $colorMain;
+    @include mobile  {
+      font-size: 48px;
+    }
+    @include xl-mobile {
+      font-size: 28px;
+    }
+  }
+  &__heading {
+    padding: 128px 0 64px 0;
+    @include xl-mobile {
+      padding: 64px 0 32px 0;
+    }
+  }
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 115%;
+  font-family: $fontBase;
+  color: $colorWhite;
+  font-style: normal;
+  font-weight: 500;
+
+  @include desktop {
+    font-size: 72px;
+    line-height: 115%;
+  }
+
+  @include xl-mobile {
+    font-size: 32px;
+    line-height: 116%;
+    letter-spacing: 0.32px;
+  }
+}

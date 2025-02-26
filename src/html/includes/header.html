@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport"/>
+    <title><%=title%></title>
+    <meta content="ГК Терминал" name="description">
+    <script src="https://api-maps.yandex.ru/v3/?apikey=b077fb97-b2dd-4a45-99cd-8c0a6020b94c&lang=ru_RU"></script>
+
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <link as="font" crossorigin href="./fonts/TTFirsTextTrial-Bd.woff2"
+          rel="preload" type="font/woff2">
+    <link as="font" crossorigin href="./fonts/TTFirsTextTrial-Lt.woff2"
+          rel="preload" type="font/woff2">
+    <link as="font" crossorigin href="./fonts/TTFirsTextTrial-Md.woff2"
+          rel="preload" type="font/woff2">
+    <link as="font" crossorigin href="./fonts/TTFirsTextTrial-Rg.woff2"
+          rel="preload" type="font/woff2">
+    <link as="font" crossorigin href="./fonts/TTFirsTextTrial-XBd.woff2"
+          rel="preload" type="font/woff2">
+</head>
+
+
+<body class="<%=themeClass%>">
+
+
+<!-- header -->
+<div class="burger">
+    <div class="burger-overlay"></div>
+    <div class="burger-menu">
+        <div class="container burger-menu__wrapper">
+            <div class="burger-menu__links">
+                <div class="burger-menu__grid-col">
+                    <div class="burger-menu__item">
+                        <div class="burger-menu__item-title-wrapper">
+                            <p class="burger-menu__item-title">О компании</p>
+                            <span class="icon icon-chevron"></span>
+                        </div>
+                        <ul class="burger-menu__sub-list">
+                            <li class="burger-menu__sub-item"><a href="#" class="burger-menu__sub-link">Компании</a></li>
+                            <li class="burger-menu__sub-item"><a href="#" class="burger-menu__sub-link">Презентация</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="burger-menu__grid-col">
+                    <div class="burger-menu__item">
+                        <div class="burger-menu__item-title-wrapper">
+                            <a href="#" class="burger-menu__item-title">Новости</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger-menu__grid-col">
+                    <div class="burger-menu__item">
+                        <div class="burger-menu__item-title-wrapper">
+                            <a href="#" class="burger-menu__item-title">Завершенные проекты</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger-menu__grid-col">
+                    <div class="burger-menu__item">
+                        <div class="burger-menu__item-title-wrapper">
+                            <a href="#" class="burger-menu__item-title">Карьера</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger-menu__grid-col">
+                    <div class="burger-menu__item">
+                        <div class="burger-menu__item-title-wrapper">
+                            <a href="#" class="burger-menu__item-title">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+            </div>
+            <nav class="header__nav hide-only-mobile">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a class="header__nav-link" href="#">
+                            О компании
+                            <span class="icon icon-chevron"></span>
+                        </a>
+                        <ul class="header__submenu">
+                            <li><a href="#">Компании</a></li>
+                            <li><a href="#">Презентация</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item">
+                        <a class="header__nav-link" href="#">Новости</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a class="header__nav-link" href="#">Завершенные проекты</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a class="header__nav-link" href="#">Карьера</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a class="header__nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__info">
+                <a href="#" class="button button-callback button-second">
+                <span class="button__text-container">
+                  <span class="button__text button__text--visible">Заказать звонок</span>
+                  <span class="button__text button__text--hidden">Заказать звонок</span>
+                </span>
+                </a>
+                <a href="#" class="button button-callback-mobile">
+                    <span class="button__text-container">
+                        <i class="icon icon-call"></i>
+                    </span>
+                </a>
+                <div data-toggle-mobile-menu-button class="header__burger">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main class="body">

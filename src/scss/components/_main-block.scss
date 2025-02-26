@@ -1,0 +1,170 @@
+.main {
+  &__inner {
+    height: 100svh;
+    margin-bottom: 0;
+    max-height: 1080px;
+    min-height: auto;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__video {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__hero {
+    //Заглушка на время разработки
+    background-image: url("../img/main-video-plug.png");
+    //background-image норм гифка
+    background-size: cover;
+    height: 100%;
+  }
+
+  &__information-wrapper {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    padding-left: $container-padding-left;
+    padding-right: $container-padding-right;
+    margin: 0 auto;
+    width: 100%;
+    background: linear-gradient(0deg, #000F1F 0%, rgba(0, 15, 31, 0.00) 100%);
+
+
+    @include mobile {
+      max-width: 100%;
+      padding: 0 24px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 84px;
+  }
+
+  &__title {
+    h1 {
+      margin: 0;
+    }
+  }
+
+  &__text {
+    margin-top: auto;
+    gap: 16px;
+    display: inline-grid;
+    max-width: 585px;
+
+    p {
+      @extend .subtitle-m;
+    }
+  }
+
+  &__bottom {
+    margin-top: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 32px;
+    position: relative;
+    gap: 32px;
+
+    .main__fixed-button {
+      position: static;
+      margin: 0;
+      margin-left: auto;
+    }
+  }
+
+  &__phone {
+
+    @include only-mobile {
+      display: none;
+
+    }
+    a {
+      @extend .desktop-h5-m;
+      text-decoration: none;
+    }
+  }
+
+  &__button {
+    .btn {
+      padding: 16px 32px;
+    }
+  }
+
+  &__fixed-button {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    z-index: 100;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba($colorMain, 30%);
+    background-color: rgba($colorBlack, 40%);
+    transition: border-color .5s ease-in-out;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: transform .5s ease-in-out;
+    }
+
+    &::before {
+      background-image: url("../img/icons/icon-telegram.svg");
+      transform-origin: center;
+    }
+
+    &::after {
+      background-image: url("../img/icons/icon-telegram.svg");
+      transform: translate(-50%, -50%) rotate(-45deg) translateY(100%);
+      opacity: 0;
+    }
+
+    &:hover {
+      border-color: rgba($colorMain, 100%);
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg) translateY(-100%);
+        opacity: 0;
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(0);
+        opacity: 1;
+      }
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    .main__bottom & {
+      position: static;
+      margin: 0;
+      margin-left: auto;
+    }
+  }
+}
