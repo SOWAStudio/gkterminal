@@ -142,4 +142,16 @@ body {
             }
         }
     }
+
+    .contacts__slider .swiper-pagination {
+        width: max-content !important;
+        left: 106% !important;
+        top: 0px !important;
+        padding: 0;
+        &:not(.swiper-pagination-tablet) {
+            @include mobile  {
+                display: none;
+            }
+        }
+    }
 }

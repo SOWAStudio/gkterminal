@@ -16,6 +16,21 @@
         align-items: center;
         justify-content: space-between;
         gap: 20px;
+
+        @media (max-width: $tablet) and (min-width: ($xs-mobile + 200)) {
+            align-items: center!important;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+
+        @media (max-width: $tablet) and (min-width: ($xs-mobile + 200)) {
+            flex-direction: column;
+            gap: 16px;
+        }
     }
 
     &__left {
@@ -49,7 +64,33 @@
         text-align: right;
     }
 
-    @include mobile {
+    @media (max-width: $tablet) and (min-width: ($xs-mobile + 1)) {
+        height: auto;
+        min-height: auto;
+        padding: 24px 0;
+
+        &__inner {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        &__center {
+            text-align: left;
+        }
+
+        &__right {
+            text-align: left;
+        }
+
+        &__left {
+            margin-left: auto;
+        }
+    }
+
+    @media screen and (max-width: $xs-mobile) {
         height: auto;
         min-height: auto;
         padding: 24px 0;
@@ -57,13 +98,14 @@
         &__inner {
             flex-direction: column;
             gap: 16px;
-            align-items: center;
+            align-items: flex-start;
         }
-    }
 
-    @media screen and (max-width: 375px) {
-        &__inner {
-            align-items: flex-start !important;
+        &__content {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            width: 100%;
         }
 
         &__left,
@@ -71,6 +113,11 @@
         &__right {
             width: 100%;
             text-align: left !important;
+        }
+
+        &__left {
+            order: unset;
+            margin-left: unset;
         }
     }
 }

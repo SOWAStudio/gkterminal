@@ -2,8 +2,8 @@ import '../scss/app.scss';
 import lozad from 'lozad'
 import { initHiddenContent, initMobileMenu } from './helpers/helpers'
 import { toggleDescriptionVisibility } from './components/toggleDescriptionVisibility.js';
-import { initSwipers } from './libs/swipers';
-import { map } from './libs/map';
+import { initSwipers } from './libs/initSwiper';
+import { initMap } from './libs/initMap';
 import { initFeedback } from './components/feedback';
 import { initModal } from './components/modal';
 import { initHeader } from './components/header';
@@ -18,10 +18,9 @@ $(document).ready(function() {
 
         initHiddenContent();
         initMobileMenu();
-        initSwipers();
-        initFeedback();
-        initModal();
-        initHeader();
+
+        // Инициализируем слайдеры и карту
+        const sliders = initSwipers();
 
         // Инициализация карты с координатами
         const locations = [
@@ -74,6 +73,9 @@ $(document).ready(function() {
             }
         ];
 
-        map(locations);
+        initFeedback();
+        initModal();
+        initHeader();
+        initMap(locations);
     }
 });

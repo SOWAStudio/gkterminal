@@ -26,7 +26,7 @@
         left: 0;
         width: 100%;
         height: 400px;
-        background-image: url('../img/production-complex/complex-mask.png');
+        background: linear-gradient(180deg, #000F1F 0%, rgba(0, 15, 31, 0.00) 100%)
     }
     &__container {
         position: relative;
@@ -194,8 +194,6 @@
         position: relative;
 
         // Контент должен быть над затемнением
-        //&__container,
-        //.container,
         .section__heading,
         .swiper,
         .map-container {
@@ -204,16 +202,16 @@
         }
 
         // Дополнительное затемнение под контентом
-        &::before {
-            content: '';
+        &::after {
+            background: rgba(0, 27, 55, .75);
+            content: "";
+            height: 100%;
+            left: 0;
+            pointer-events: none;
             position: absolute;
             top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 15, 31, 0.8);
-            pointer-events: none;
-            z-index: 2;
+            z-index: 1;
         }
     }
 }

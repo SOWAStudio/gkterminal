@@ -1,0 +1,292 @@
+.section--contacts {
+    position: relative;
+    overflow: hidden;
+
+    &__title {
+        @extend .desktop-h1-m;
+        margin-top: 32px;
+        margin-bottom: 64px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -64px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $colorMain;
+        }
+    }
+}
+
+.contacts-tabs {
+    padding: 32px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        background: transparent;
+        border: 2px solid $colorMain;
+        border-radius: 64px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover,
+        &.active {
+            background-color: $colorMain;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__logo {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+    }
+
+    &__name {
+        @extend .body-1-m;
+        color: $colorWhite;
+        white-space: nowrap;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 128%;
+        letter-spacing: 0.16px;
+    }
+}
+
+.section--company-info {
+    background: #000F1F;
+    padding: 32px 0 64px 0;
+}
+
+.company-info {
+    &__title {
+        @extend .desktop-h4-m;
+        color: $colorMain;
+        margin-bottom: 32px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        &-title {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 128%;
+            letter-spacing: 0.16px;
+            color: $colorWhite;
+            margin-bottom: 8px;
+        }
+
+        &-description {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 128%;
+            letter-spacing: 0.16px;
+            color: $colorWhite;
+        }
+    }
+
+    &__link {
+        margin-top: 32px;
+        margin-left: 0;
+        width: max-content;
+
+        .button__text-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .button__text {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 128%;
+            letter-spacing: 0.16px;
+        }
+
+        .button__icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        &:hover {
+            .button__text--visible {
+                transform: translateY(-100%);
+            }
+
+            .button__text--hidden {
+                transform: translateY(-100%);
+            }
+
+            .button__icon {
+                transform: none;
+            }
+        }
+
+        @include xl-mobile {
+            width: 100%;
+        }
+    }
+}
+
+.section--company-slider {
+    overflow: hidden;
+    padding-bottom: 64px;
+    position: relative;
+    z-index: 2;
+    background: #000F1F;
+}
+
+.contacts {
+    overflow: hidden;
+    padding-bottom: 64px;
+    position: relative;
+    z-index: 2;
+    &__slider {
+        overflow: visible !important;
+        padding-bottom: 5px !important;
+        @media (min-width: $desktop) {
+            max-width: 70.5%;
+        }
+        &-nav {
+            position: absolute;
+            display: flex;
+            width: 100%;
+            bottom: 0px;
+            .container {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                column-gap: 24px;
+                width: 100%;
+                padding: 0;
+                @include only-mobile {
+                    padding: 0;
+                    column-gap: 16px;
+                }
+                @include xl-mobile {
+                    justify-content: center;
+                }
+            }
+            .swiper-pagination {
+                display: none;
+                @include only-mobile {
+                    display: flex;
+                    flex-direction: row;
+                    column-gap: 8px;
+                    position: static;
+                    transform: none;
+                    width: max-content;
+                    padding: 0;
+                    font-size: 14px;
+                }
+                @include xl-mobile {
+                    transform: translateY(10px);
+                }
+            }
+        }
+    }
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        @include only-mobile {
+            row-gap: 16px;
+        }
+        &-media {
+            position: relative;
+            @include min-desktop {
+                height: 548px;
+            }
+            @include max-desktop {
+                height: 398px;
+            }
+            @include only-mobile {
+                height: 307px;
+            }
+            @include xl-mobile {
+                height: 187px;
+            }
+            .contacts__slide-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .contacts__slide-logo {
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                position: absolute;
+                top: 32px;
+                left: 32px;
+                @include only-mobile {
+                    display: none;
+                }
+            }
+        }
+        &-link {
+            width: max-content;
+            position: absolute;
+            left: 32px;
+            bottom: 32px;
+            @include only-mobile {display: none;}
+        }
+        &-title {
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 118%;
+            @include xl-mobile {
+                font-size: 24px;
+            }
+        }
+        .contacts__slide-logo--tablet {
+            width: 87px;
+            height: auto;
+            object-fit: contain;
+            @media (min-width: $tablet) {
+                display: none;
+            }
+            @include xl-mobile {
+                width: 48px;
+            }
+        }
+    }
+    &__title {
+        @include only-mobile {
+            max-width: 500px;
+        }
+    }
+    .swiper-slide {
+        transition: opacity .3s ease-in-out;
+        &:not(.swiper-slide-active) {
+            opacity: .32;
+        }
+    }
+}
+

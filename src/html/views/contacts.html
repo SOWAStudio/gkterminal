@@ -1,0 +1,169 @@
+<% var data = {
+title: "KPK",
+themeClass: "",
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<section class="section section--contacts">
+    <div class="header-margin"></div>
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="/" class="breadcrumbs__item">Главная</a>
+            <span class="breadcrumbs__separator">/</span>
+            <span class="breadcrumbs__item breadcrumbs__item--active">Контакты</span>
+        </div>
+        <h1 class="section--contacts__title">Контакты и реквизиты наших предприятий</h1>
+        <div class="contacts-tabs">
+            <button class="contacts-tabs__button active" data-company="ozsk">
+                <img src="./img/location/ozsk.svg" alt="ООО «ОЗСК»" class="contacts-tabs__logo">
+                <span class="contacts-tabs__name">ООО «ОЗСК»</span>
+            </button>
+            <button class="contacts-tabs__button" data-company="gotx">
+                <img src="./img/location/gootx.svg" alt="АО «ГОТХ»" class="contacts-tabs__logo">
+                <span class="contacts-tabs__name">АО «ГОТХ»</span>
+            </button>
+            <button class="contacts-tabs__button" data-company="terminal-sk">
+                <img src="./img/location/terminal.svg" alt="ООО «СЗ «Терминал СК»" class="contacts-tabs__logo">
+                <span class="contacts-tabs__name">ООО «СЗ «Терминал СК»</span>
+            </button>
+            <button class="contacts-tabs__button" data-company="terminal-an">
+                <img src="./img/location/an_terminal.svg" alt="ООО «АН «Терминал»" class="contacts-tabs__logo">
+                <span class="contacts-tabs__name">ООО «АН «Терминал»</span>
+            </button>
+            <button class="contacts-tabs__button" data-company="terminal-td">
+                <img src="./img/location/terminal.svg" alt="ТД «Терминал»" class="contacts-tabs__logo">
+                <span class="contacts-tabs__name">ТД «Терминал»</span>
+            </button>
+        </div>
+    </div>
+    <div class="section-gradient"></div>
+    <div class="section-bg lozad" data-background-image="./img/production-complex/bg.jpeg"></div>
+</section>
+
+<section class="section section--company-info">
+    <div class="container">
+        <h2 class="company-info__title">Группа компаний «Терминал»</h2>
+        <div class="company-info__grid">
+            <div class="company-info__item">
+                <div class="company-info__item-title">ИНН:</div>
+                <div class="company-info__item-description">5257089784</div>
+            </div>
+            <div class="company-info__item">
+                <div class="company-info__item-title">Юридический адрес:</div>
+                <div class="company-info__item-description">Нижний Новгород, проспект Ленина, 100В</div>
+            </div>
+            <div class="company-info__item">
+                <div class="company-info__item-title">Коммерческий директор:</div>
+                <div class="company-info__item-description">Тестов Тест Тестович<br>
+                    8(812)300-0035<br>
+                    +7(984)139-2011<br>
+                   <span class="color-link">comdir@gkterminal.ru</span>
+                </div>
+            </div>
+            <div class="company-info__item">
+                <div class="company-info__item-title">Начальник отдела по работе с юридическими лицами:</div>
+                <div class="company-info__item-description">Тестов Тест Тестович<br>
+                    8(812)300-0035<br>
+                    +7(984)139-2011<br>
+                    <span class="color-link">legent@gkterminal.ru</span>
+                </div>
+            </div>
+        </div>
+        <button class="company-info__link button with-icon">
+            <div class="button__text-container">
+                <span class="button__text button__text--visible">Перейти на сайт</span>
+                <span class="button__text button__text--hidden">Перейти на сайт</span>
+                <div class="button__icon">
+                    <img src="./img/icons/icon-website.svg" alt="Перейти на сайт">
+                </div>
+            </div>
+        </button>
+    </div>
+</section>
+
+<section class="section section--company-slider">
+    <div class="container">
+        <section class="section section--company-slider">
+            <div class="container">
+                <div class="contacts__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="contacts__slide">
+                                <img class="contacts__slide-logo--tablet" src="./img/current-construction/jule-logo.png" alt="">
+                                <div class="contacts__slide-media">
+                                    <img class="contacts__slide-image" src="./img/company-group/slide-1.png" alt="">
+                                    <img class="contacts__slide-logo" src="./img/current-construction/jule-logo.png" alt="">
+                                    <a href="#" class="contacts__slide-link button">
+                                <span class="button__text-container">
+                                    <span class="button__text button__text--visible">Подробнее</span>
+                                    <span class="button__text button__text--hidden">Подробнее</span>
+                                </span>
+                                    </a>
+                                </div>
+                                <h3 class="contacts__slide-title">ЖК «Июль»</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="contacts__slide">
+                                <img class="contacts__slide-logo--tablet" src="./img/current-construction/jule-logo.png" alt="">
+                                <div class="contacts__slide-media">
+                                    <img class="contacts__slide-image" src="./img/company-group/slide-2.png" alt="">
+                                    <img class="contacts__slide-logo" src="./img/current-construction/jule-logo.png" alt="">
+                                    <a href="#" class="contacts__slide-link button">
+                                <span class="button__text-container">
+                                    <span class="button__text button__text--visible">Подробнее</span>
+                                    <span class="button__text button__text--hidden">Подробнее</span>
+                                </span>
+                                    </a>
+                                </div>
+                                <h3 class="contacts__slide-title">ЖК «Июль»</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="contacts__slide">
+                                <img class="contacts__slide-logo--tablet" src="./img/current-construction/jule-logo.png" alt="">
+                                <div class="contacts__slide-media">
+                                    <img class="contacts__slide-image" src="./img/company-group/slide-3.png" alt="">
+                                    <img class="contacts__slide-logo" src="./img/current-construction/jule-logo.png" alt="">
+                                    <a href="#" class="contacts__slide-link button">
+                                <span class="button__text-container">
+                                    <span class="button__text button__text--visible">Подробнее</span>
+                                    <span class="button__text button__text--hidden">Подробнее</span>
+                                </span>
+                                    </a>
+                                </div>
+                                <h3 class="contacts__slide-title">ЖК «Июль»</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="contacts__slide">
+                                <img class="contacts__slide-logo--tablet" src="./img/current-construction/jule-logo.png" alt="">
+                                <div class="contacts__slide-media">
+                                    <img class="contacts__slide-image" src="./img/company-group/slide-4.png" alt="">
+                                    <img class="contacts__slide-logo" src="./img/current-construction/jule-logo.png" alt="">
+                                    <a href="#" class="contacts__slide-link button">
+                                <span class="button__text-container">
+                                    <span class="button__text button__text--visible">Подробнее</span>
+                                    <span class="button__text button__text--hidden">Подробнее</span>
+                                </span>
+                                    </a>
+                                </div>
+                                <h3 class="contacts__slide-title">ЖК «Июль»</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination container"></div>
+                    <div class="contacts__slider-nav">
+                        <div class="container">
+                            <div class="swiper-btn swiper-button-prev"></div>
+                            <div class="swiper-pagination swiper-pagination-tablet"></div>
+                            <div class="swiper-btn swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
