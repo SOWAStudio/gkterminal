@@ -62,9 +62,8 @@ function createCallbackModal() {
                         </label>
                     </div>
                     <button type="submit" class="button">
-                        <span class="button__text-container">
-                            <span class="button__text button__text--visible">Заказать звонок</span>
-                            <span class="button__text button__text--hidden">Заказать звонок</span>
+                        <span class="button__text-container" data-text="Заказать звонок">
+                            <span class="button__text">Заказать звонок</span>
                         </span>
                     </button>
                 </form>

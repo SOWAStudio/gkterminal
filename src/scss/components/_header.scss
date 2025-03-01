@@ -33,15 +33,27 @@ $headerHeight: 96px;
     display: block;
     width: 190px;
     height: 32px;
-    background: url("../img/logo.svg") center center no-repeat;
+    //background: url("../img/logo.svg") center center no-repeat;
     background-size: contain;
     text-decoration: none;
     outline: none;
 
-    @include mobile {
-      background: url("../img/logo-mobile.svg") center center no-repeat;
+    &-desktop {
+      width: 190px;
+      height: 32px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &-mobile {
       width: 81px;
       height: 52px;
+
+      @include desktop {
+        display: none;
+      }
     }
   }
 

@@ -136,11 +136,8 @@
         }
 
         &:hover {
-            .button__text--visible {
-                transform: translateY(-100%);
-            }
-
-            .button__text--hidden {
+            .button__text-container:after,
+            .button__text-container .button__text {
                 transform: translateY(-100%);
             }
 

@@ -21,6 +21,12 @@
   background: rgba(0, 15, 31, 0.32);
   border: 2px solid var(--0076-bf, $colorMain);
 
+  &.production-complex__link {
+    font-size: 16px;
+    line-height: 128%;
+    letter-spacing: 0.16px;
+  }
+
   &.with-icon {
     padding: 14px 16px 14px 30px;
 
@@ -28,10 +34,20 @@
       display: flex;
       align-items: center;
       gap: 8px;
-    }
+      width: auto;
+      
+      &:after {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: auto;
+        justify-content: flex-start;
+      }
 
-    .button__text--hidden {
-      left: -16px;
+      span:not(.button__icon) {
+        width: auto;
+        justify-content: flex-start;
+      }
     }
 
     .button__icon {
@@ -41,27 +57,23 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 0.4s ease-in-out;
+      position: relative;
+      z-index: 2;
+      margin-left: 8px;
 
       svg {
         width: 6px;
         height: 8px;
       }
     }
-
-    &:hover {
-      .button__text--visible {
-        transform: translateY(-100%);
-      }
-
-      .button__text--hidden {
-        transform: translateY(-100%);
-      }
-    }
   }
 
   &-second {
     @extend .button-second;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 128%;
+    letter-spacing: 0.16px;
   }
 
   &-callback {
@@ -80,30 +92,37 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     height: 100%;
-  }
 
-  &__text {
-    display: block;
-    transition: transform 0.4s ease-in-out;
+    &:after,
+    span:not(.button__icon) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      transition: transform 0.4s ease-in-out;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+    }
 
-    &--hidden {
+    &:after {
+      content: attr(data-text);
       position: absolute;
-      top: 100%;
       left: 0;
-      width: 100%;
-      text-align: center;
+      top: 100%;
     }
   }
 
   &:hover {
-    .button__text--visible {
-      transform: translateY(-100%);
-    }
-
-    .button__text--hidden {
-      transform: translateY(-100%);
+    .button__text-container {
+      &:after,
+      span:not(.button__icon) {
+        transform: translateY(-100%);
+      }
     }
   }
 }
