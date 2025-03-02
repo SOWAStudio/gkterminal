@@ -7,6 +7,8 @@ import { initMap } from './libs/initMap';
 import { initFeedback } from './components/feedback';
 import { initModal } from './components/modal';
 import { initHeader } from './components/header';
+import { initContacts } from './components/contacts';
+import { locations } from './data/locations';
 
 $(document).ready(function() {
     initSite();
@@ -19,63 +21,30 @@ $(document).ready(function() {
         initHiddenContent();
         initMobileMenu();
 
+        // Инициализируем контакты и получаем методы управления
+        const contactsController = initContacts();
+
         // Инициализируем слайдеры и карту
         const sliders = initSwipers();
 
-        // Инициализация карты с координатами
-        const locations = [
-            {
-                coordinates: [56.337694, 43.859694], // АО «ГОТХ»
-                name: "АО «ГОТХ»",
-                address: "ул. Окская Гавань, 1",
-                logo: "./img/location/gootx.svg",
-                website: "https://example.com"
-            },
-            {
-                coordinates: [56.327694, 43.949694], // ООО «ОЗСК»
-                name: "ООО «ОЗСК»",
-                address: "ул. Монастырка, 1",
-                logo: "./img/location/ozsk.svg"
-            },
-            {
-                coordinates: [56.287694, 43.939694], // ООО «СЗ «Терминал СК»
-                name: "ООО «СЗ «Терминал СК»",
-                address: "проспект Ленина, 100В",
-                logo: "./img/location/terminal.svg"
-            },
-            {
-                coordinates: [56.247694, 43.929694], // ООО «АН «Терминал»
-                name: "ООО «АН «Терминал»",
-                address: "ул. Героя Шнитникова, 1; Бурнаковская улица, 99",
-                logo: "./img/location/an_terminal.svg",
-                website: "https://example.com"
-            },
-            {
-                coordinates: [56.327694, 43.949694], // ТД «Терминал»
-                name: "ТД «Терминал»",
-                address: "ул. Монастырка, 1",
-                logo: "./img/location/terminal.svg",
-                website: "https://example.com"
-            },
-            // Жилые комплексы
-            {
-                coordinates: [56.337694, 43.919694], // ЖК «ИЮЛЬ»
-                name: "ЖК «ИЮЛЬ»",
-                address: "ул. Бурнаковская, д. 99",
-                logo: "./img/location/iul.svg",
-                website: "https://example.com"
-            },
-            {
-                coordinates: [56.247694, 43.929694], // ЖК «Торпедо»
-                name: "ЖК «Торпедо»",
-                address: "ул. Героя Шнитникова, д.1",
-                logo: "./img/location/torpedo.svg"
-            }
-        ];
+        // Инициализация карты и контактов
+        initMapAndContacts();
 
         initFeedback();
         initModal();
         initHeader();
-        initMap(locations);
+    }
+
+    // Инициализация карты и контактов
+    async function initMapAndContacts() {
+        const isContactsPage = document.querySelector('.section--contacts');
+        const mapControls = await initMap(locations);
+        
+        if (isContactsPage) {
+            const contacts = initContacts();
+            if (mapControls) {
+                contacts.setMapControls(mapControls);
+            }
+        }
     }
 });

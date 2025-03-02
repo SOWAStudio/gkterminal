@@ -3,7 +3,6 @@
     overflow: hidden;
 
     &__title {
-        @extend .desktop-h1-m;
         margin-top: 32px;
         margin-bottom: 64px;
         position: relative;
@@ -18,6 +17,18 @@
             background-color: $colorMain;
         }
     }
+
+    .section-bg {
+        @media (max-width: 1025px) {
+            background-position: -175px -125px;
+            transform: scale(1.4);
+        }
+
+        @media (max-width: 768px) {
+            background-position: center -125px;
+            transform: scale(1.4);
+        }
+    }
 }
 
 .contacts-tabs {
@@ -30,7 +41,7 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        padding: 12px 24px;
+        padding: 4px 24px;
         background: transparent;
         border: 2px solid $colorMain;
         border-radius: 64px;
@@ -48,8 +59,8 @@
     }
 
     &__logo {
-        width: 32px;
-        height: 32px;
+        width: 46px;
+        height: 46px;
         object-fit: contain;
     }
 
@@ -148,6 +159,14 @@
 
         @include xl-mobile {
             width: 100%;
+        }
+    }
+
+    &__content {
+        display: none;
+
+        &.active {
+            display: block;
         }
     }
 }

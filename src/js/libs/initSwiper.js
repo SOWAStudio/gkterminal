@@ -225,10 +225,11 @@ function initContactsSlider() {
     return new Swiper('.contacts__slider', {
         modules: [Navigation, Pagination],
         speed: 1000,
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         centeredSlides: true,
         loop: true,
         initialSlide: 0,
+        allowTouchMove: true,
         breakpoints: {
             0: {
                 spaceBetween: 24,

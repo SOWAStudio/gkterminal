@@ -60,6 +60,10 @@ img {
     max-width: 100%;
     padding: 0 24px;
   }
+
+  @media (max-width: #{$xs-mobile + 1}) {
+    padding: 0 16px;
+  }
 }
 
 :root {
@@ -67,7 +71,7 @@ img {
 }
 
 .section-gradient {
-    background: linear-gradient(180deg, #000F1F 0%, rgba(0, 15, 31, 0.00) 100%);
+    background:linear-gradient(180deg, #000f1fdb, rgba(0, 15, 31, 0));
     bottom: 0;
     left: 0;
     margin: auto;
