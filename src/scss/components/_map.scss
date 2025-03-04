@@ -27,14 +27,32 @@
 }
 
 .map-marker {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    transition: transform 0.3s ease, z-index 0s;
-    z-index: 100;
-    margin-bottom: 10px;
+    position: relative;
+    box-sizing: border-box;
+    transform: translate(-50%, calc(-50% - 24px));
+    cursor: pointer;
+    width: 47px;
+
+    &--big {
+        width: 77px;
+
+        .map-marker__logo {
+            width: 77px;
+            height: 100px;
+        }
+        //
+        //.map-marker__content {
+        //    padding: 8px 16px;
+        //}
+        //
+        //.map-marker__address {
+        //    font-size: 16px;
+        //    max-width: 300px;
+        //}
+    }
 
     &.active {
         z-index: 101;
@@ -84,10 +102,11 @@
     &__content {
         background: #FFFFFF;
         border-radius: 16px;
-        box-shadow: var(--sds-size-depth-0) var(--sds-size-depth-100) var(--sds-size-depth-100) var(--sds-size-depth-negative-025) var(--sds-color-black-200), var(--sds-size-depth-0) var(--sds-size-depth-100) var(--sds-size-depth-100) var(--sds-size-depth-negative-025) var(--sds-color-black-100);
+        box-shadow: 0px 4px 4px -1px rgba(12, 12, 13, 0.1), 0px 4px 4px -1px rgba(12, 12, 13, 0.05);
         padding: 4px 12px;
         z-index: 998;
         transition: box-shadow 0.3s ease;
+        margin-bottom: 10px;
     }
 
     &__name {

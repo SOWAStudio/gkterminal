@@ -26,7 +26,8 @@ export const locations = [
         name: 'ООО «АН «Терминал»',
         coordinates: [56.218687, 43.856228],
         address: "ул. Героя Шнитникова, 1",
-        logo: "./img/location/map-gotx-main.svg"
+        logo: "./img/location/map-gotx-main.svg",
+        markerSize: 'big'
     },
     {
         id: 'terminal-td',

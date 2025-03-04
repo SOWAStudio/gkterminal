@@ -39,7 +39,7 @@ $(document).ready(function() {
     async function initMapAndContacts() {
         const isContactsPage = document.querySelector('.section--contacts');
         const mapControls = await initMap(locations);
-        
+
         if (isContactsPage) {
             const contacts = initContacts();
             if (mapControls) {

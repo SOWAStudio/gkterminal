@@ -36,6 +36,11 @@ export async function initMap(locations) {
         const markerElement = document.createElement('div');
         markerElement.className = 'map-marker';
         markerElement.setAttribute('data-company', location.id);
+        
+        // Добавляем класс для большого маркера
+        if (location.markerSize === 'big') {
+            markerElement.classList.add('map-marker--big');
+        }
 
         let markerContent = `
             <div class="map-marker__logo">
