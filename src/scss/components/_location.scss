@@ -52,7 +52,7 @@
             .swiper-wrapper {
                 display: flex;
             }
-            
+
             .swiper-slide {
                 width: calc(50% - 8px) !important;
                 flex-shrink: 0;
@@ -63,7 +63,7 @@
             .swiper-wrapper {
                 display: flex;
             }
-            
+
             .swiper-slide {
                 width: calc(50% - 8px) !important;
                 flex-shrink: 0;
@@ -187,10 +187,10 @@
 
     &__name {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 8px;
         margin-bottom: 8px;
-        white-space: nowrap;
+        width: 100%;
 
         @include max-desktop {
             justify-content: center;
@@ -205,8 +205,6 @@
         @include xs-mobile {
             justify-content: flex-start;
             margin-bottom: 4px;
-            white-space: normal;
-            flex-wrap: wrap;
         }
 
         span {
@@ -215,6 +213,9 @@
             font-weight: 500;
             line-height: 136%;
             letter-spacing: 0.18px;
+            word-wrap: break-word;
+            word-break: break-word;
+            max-width: calc(100% - 32px);
         }
     }
 
@@ -237,16 +238,16 @@
 
         &:hover {
             color: $colorMain;
-            
+
             img[src*="icon-website.svg"] {
                 opacity: 0;
             }
-            
+
             img[src*="icon-website-blue.svg"] {
                 opacity: 1;
             }
         }
-        
+
         img[src*="icon-website-blue.svg"] {
             opacity: 0;
         }
