@@ -28,7 +28,7 @@ function initModalEvents() {
 
 function createCallbackModal() {
     const modalHtml = `
-        <div class="modal" id="callbackModal">
+        <div class="modal modal-callback" id="callbackModal">
             <div class="modal__container">
                 <button class="modal__close" aria-label="Закрыть"></button>
                 <div class="modal__title">Мы вам перезвоним!</div>
@@ -72,10 +72,10 @@ function createCallbackModal() {
     `;
 
     $('body').append(modalHtml);
-    
+
     const $modal = $('#callbackModal');
     const $form = $modal.find('form');
-    
+
     $modal.find('.modal__close').on('click', () => {
         closeModal('callbackModal');
     });
@@ -217,4 +217,4 @@ function closeVideoModal() {
 
     $modal.removeClass('active');
     $('body').css('overflow', '');
-} 
+}

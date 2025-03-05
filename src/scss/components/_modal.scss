@@ -12,6 +12,12 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @include only-mobile {
+        align-items: flex-start;
+    }
 
     &.active {
         opacity: 1;
@@ -170,7 +176,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-    
+
                 &::before,
                 &::after {
                     width: 25px;
