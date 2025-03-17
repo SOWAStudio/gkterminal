@@ -1,0 +1,214 @@
+.not-found {
+  &__inner {
+    height: 100svh;
+    margin-bottom: 0;
+    max-height: 1080px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__video {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__hero {
+    background-image: url("../img/404-main.png");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 15, 31, 0.85);
+      z-index: 0;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: $container-padding-left;
+    padding-right: $container-padding-right;
+    width: 100%;
+
+    @include mobile {
+      padding: 0 24px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+  }
+
+  &__number {
+    font-family: $fontBase;
+    font-weight: 950;
+    font-size: 560px;
+    line-height: 100%;
+    letter-spacing: -0.13em;
+    background-image: url("../img/404-main-inside.png");
+    background-size: 95%;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+
+    @media (min-width: 769px) and (max-width: 1200px),
+           (min-height: 500px) and (max-height: 800px) {
+      font-size: 402px;
+    }
+
+    @include only-mobile {
+      font-size: 326px;
+    }
+
+    @include xl-mobile {
+      font-size: 170px;
+    }
+
+    &::after {
+      content: '404';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      z-index: -1;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    p {
+      @extend .desktop-h4-m;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0;
+      margin-bottom: 8px;
+
+      @include only-mobile {
+        font-size: 24px;
+      }
+
+      & + p {
+        @extend .subtitle-r;
+        font-weight: 300;
+        margin-bottom: 0;
+
+        @include only-mobile {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 32px;
+  }
+
+  &__button {
+    .button {
+      padding: 16px 32px;
+      width: 220px;
+    }
+  }
+
+  &__phone {
+    @include only-mobile {
+      display: none;
+    }
+    a {
+      @extend .desktop-h5-m;
+      text-decoration: none;
+    }
+  }
+
+  &__fixed-button {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    z-index: 100;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba($colorMain, 30%);
+    background-color: rgba($colorBlack, 40%);
+    transition: border-color .5s ease-in-out;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: transform .5s ease-in-out;
+    }
+
+    &::before {
+      background-image: url("../img/icons/icon-telegram.svg");
+      transform-origin: center;
+    }
+
+    &::after {
+      background-image: url("../img/icons/icon-telegram.svg");
+      transform: translate(-50%, -50%) rotate(-45deg) translateY(100%);
+      opacity: 0;
+    }
+
+    &:hover {
+      border-color: rgba($colorMain, 100%);
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg) translateY(-100%);
+        opacity: 0;
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(0);
+        opacity: 1;
+      }
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    .main__bottom & {
+      position: static;
+      margin: 0;
+      margin-left: auto;
+    }
+  }
+}

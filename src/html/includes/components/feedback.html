@@ -1,0 +1,57 @@
+<section class="section section--feedback">
+  <div class="container">
+    <div class="feedback">
+      <div class="feedback__content">
+        <div class="feedback__title">
+          Для получения дополнительной информации, пожалуйста, заполните форму:
+        </div>
+      </div>
+      <form class="feedback__form" id="feedbackForm">
+        <div class="feedback__form-row">
+          <div class="feedback__form-field">
+            <input type="text" name="name" placeholder="ФИО*" required>
+          </div>
+          <div class="feedback__form-field">
+            <input type="tel" name="phone" placeholder="Номер телефона*" required>
+          </div>
+        </div>
+        <div class="feedback__form-row">
+          <div class="feedback__form-field">
+            <input type="email" name="email" placeholder="Почта*" required>
+          </div>
+          <div class="feedback__form-field">
+            <select name="address" required>
+              <option value="" disabled selected>Выберите адрес*</option>
+              <option value="АО «ГОТХ»">АО «ГОТХ»</option>
+              <option value="ООО «ОЗСК»">ООО «ОЗСК»</option>
+              <option value="ООО «СЗ «Терминал СК»">ООО «СЗ «Терминал СК»</option>
+              <option value="ООО «АН «Терминал»">ООО «АН «Терминал»</option>
+              <option value="ТД «Терминал»">ТД «Терминал»</option>
+            </select>
+          </div>
+        </div>
+        <div class="feedback__form-row">
+          <div class="feedback__form-field feedback__form-field--full">
+            <textarea name="message" placeholder="Ваш вопрос" rows="5"></textarea>
+          </div>
+        </div>
+        <div class="feedback__form-row feedback__form-row--captcha">
+          <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+        </div>
+        <div class="feedback__form-row feedback__form-row--submit">
+          <div class="feedback__form-checkbox">
+            <label class="checkbox">
+              <input type="checkbox" required>
+              <span class="checkbox__text">Нажимая на кнопку «Отправить» Вы соглашаетесь с политикой конфиденциальности</span>
+            </label>
+          </div>
+          <button type="submit" class="button">
+                            <span class="button__text-container" data-text="Отправить">
+                                <span class="button__text">Отправить</span>
+                            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+<% var data = {
+title: "KPK",
+themeClass: "",
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="not-found">
+    <section class="section no-padding-top">
+        <div class="not-found__inner">
+            <div class="not-found__video">
+                <div class="not-found__hero"></div>
+            </div>
+            <div class="header-margin"></div>
+            <div class="not-found__content">
+                <div class="not-found__title">
+                    <h1 class="not-found__number">404</h1>
+                </div>
+                <div class="not-found__text">
+                    <p>Страница не найдена</p>
+                    <p>К сожалению мы ничего не нашли по вашему запросу</p>
+                </div>
+                <div class="not-found__bottom">
+                    <div class="not-found__button">
+                        <a href="/" class="button">
+                            <span class="button__text-container" data-text="На главную">
+                                <span class="button__text">На главную</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%= _.template(require('./../includes/components/feedback.html').default)(data) %>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
