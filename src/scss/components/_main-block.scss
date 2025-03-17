@@ -66,21 +66,30 @@
     margin-top: auto;
     gap: 16px;
     display: inline-grid;
-    max-width: 585px;
+    max-width: 681px;
 
     p {
-      @extend .subtitle-m;
+      @extend .desktop-h5-m;
+
+      @include mobile {
+        font-size: 16px;
+        letter-spacing: 0.16px;
+      }
     }
   }
 
   &__bottom {
-    margin-top: 96px;
+    margin-top: 32px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding-bottom: 32px;
     position: relative;
     gap: 32px;
+
+    @include tablet {
+      margin-top: -18px;
+    }
 
     .main__fixed-button {
       position: static;

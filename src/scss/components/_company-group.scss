@@ -8,7 +8,7 @@
     &__content {
         position: relative;
         display: flex;
-        padding: 64px 0 !important;
+        padding: 0 0 64px 0;
 
         @include only-mobile {
             padding: 0 !important;
@@ -90,9 +90,7 @@
             inset: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../img/slide-mask.png');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(0deg, #000f1f, rgba(0, 15, 31, 0));
             z-index: 2;
             @include only-mobile {display: none;}
         }
@@ -148,22 +146,20 @@
             display: flex;
             flex-direction: column;
             align-items: start;
-            row-gap: 24px;
+            row-gap: 32px;
             @include only-mobile {
                 margin-bottom: 32px;
                 max-width: unset;
             }
         }
         &-title {
-            font-weight: 500;
-            font-size: 34px;
-            line-height: 118%;
+            @extend .desktop-h3-m;
             @include xl-mobile {
                 font-size: 24px;
             }
         }
         &-subtitle {
-            max-width: 482px;
+            max-width: 740px;
             font-size: 14px;
             line-height: 116%;
             letter-spacing: 0.01em;
@@ -179,8 +175,8 @@
                 }
                 .stats-value {
                     font-weight: 500;
-                    font-size: 18px;
-                    line-height: 136%;
+                    font-size: 34px;
+                    line-height: 118%;
                     letter-spacing: 0.01em;
                 }
             }

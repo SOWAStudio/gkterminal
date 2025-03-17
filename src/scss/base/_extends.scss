@@ -24,6 +24,13 @@
   letter-spacing: 0.16px;
 }
 
+.body-1-r {
+  @extend .desktop-h1-r;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  font-weight: 400;
+}
+
 .body-2-m {
   @extend .desktop-h1-r;
   font-size: 14px;
@@ -47,6 +54,13 @@
   font-weight: 500;
   line-height: 128%;
   letter-spacing: 0.16px;
+}
+
+.desktop-h3-m {
+  @extend .desktop-h1-r;
+  font-size: 48px;
+  line-height: 112%;
+  font-weight: 500;
 }
 
 .desktop-h4-r {
@@ -74,6 +88,13 @@
   line-height: 140%;
 }
 
+.desktop-h6-m {
+  @extend .desktop-h1-r;
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 500;
+}
+
 .subtitle-m {
   @extend .desktop-h1-r;
   font-size: 18px;
@@ -81,4 +102,11 @@
   letter-spacing: 0.18px;
 }
 
+.subtitle-r {
+  @extend .desktop-h1-r;
+  font-size: 18px;
+  line-height: 136%;
+  letter-spacing: 0.18px;
+  font-weight: 400;
+}
 

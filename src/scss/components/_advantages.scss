@@ -1,0 +1,79 @@
+.advantages {
+    background-color: #000F1F;
+    padding: 128px 0 72px 0;
+
+    @include mobile {
+        padding: 60px 0;
+    }
+
+    @include only-mobile {
+        padding: 40px 0;
+    }
+
+    &__list {
+        display: flex;
+        gap: 64px;
+        justify-content: center;
+
+        @include mobile {
+            gap: 32px;
+        }
+
+        @include xxs-desktop {
+            gap: 32px;
+        }
+
+        @media (max-width: #{$mobile - 1}) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 24px;
+
+        @media (max-width: #{$mobile - 1}) {
+            align-items: center;
+        }
+    }
+
+    &__icon {
+        width: 128px;
+        height: 128px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @include xxs-desktop {
+            width: 88px;
+            height: 88px;
+        }
+
+        @include mobile {
+            width: 88px;
+            height: 88px;
+        }
+
+        @media (max-width: 375px) {
+            width: 75px;
+            height: 75px;
+        }
+
+
+    }
+
+    &__title {
+        @extend .desktop-h4-r;
+        font-weight: 400;
+
+        @include mobile {
+            font-size: 22px;
+        }
+    }
+}

@@ -9,6 +9,7 @@ import { initModal } from './components/modal';
 import { initHeader } from './components/header';
 import { initContacts } from './components/contacts';
 import { locations } from './data/locations';
+import initCookieNotice from './modules/cookie-notice';
 
 $(document).ready(function() {
     initSite();
@@ -33,6 +34,7 @@ $(document).ready(function() {
         initFeedback();
         initModal();
         initHeader();
+        initCookieNotice();
     }
 
     // Инициализация карты и контактов

@@ -1,0 +1,48 @@
+.cookie-notice {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0, 15, 31, 0.8);
+    backdrop-filter: blur(16px);
+    height: 124px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: $container-padding-left;
+    padding-right: $container-padding-right;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    visibility: hidden;
+
+    &.visible {
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    .button {
+        flex-shrink: 0;
+        max-width: 220px;
+        width: 100%;
+    }
+
+    &__text {
+        @extend .body-1-r;
+        color: #fff;
+    }
+
+    @include mobile {
+        height: auto;
+        padding: 24px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .button {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
