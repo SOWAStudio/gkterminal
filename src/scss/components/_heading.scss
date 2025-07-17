@@ -1,0 +1,30 @@
+.heading{
+  position: relative;
+  &__pic{
+    width: 100%;
+    vertical-align: middle;
+  }
+  &__content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .container{
+      max-width: 1520px;
+      padding-bottom: 64px;
+      border-bottom: 2px solid $colorMain;
+      padding-inline: 0;
+    }
+  }
+  &__title{
+    margin: 32px 0 24px;
+    font-size: 72px;
+    font-weight: 600;
+  }
+  &__txt{
+    max-width: 650px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $colorWhite;
+  }
+}

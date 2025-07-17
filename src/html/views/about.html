@@ -1,0 +1,475 @@
+<% var data={ title: "KPK" , themeClass: "" , }; %>
+  <%= _.template(require('./../includes/header.html').default)(data) %>
+
+    <main class="body">
+      <div class="heading">
+        <img src="./img/about-banner.png" alt="" class="heading__pic">
+        <div class="heading__content">
+          <div class="container">
+            <div class="breadcrumbs">
+              <a href="/" class="breadcrumbs__item">Главная</a>
+              <span class="breadcrumbs__separator">/</span>
+              <span class="breadcrumbs__item breadcrumbs__item--active">О компании</span>
+            </div>
+            <h1 class="heading__title">ГК Терминал — надежный партнер</h1>
+            <div class="heading__txt">За четверть века пройден путь от небольшой подрядной организации до крупной
+              производственной компании</div>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="container">
+          <div class="about__inner">
+            <div class="about__left">
+              <h2 class="about__title">Уникальный производственный <br> комплекс</h2>
+            </div>
+            <div class="about__right">
+              <div class="about__txt">
+                <p>За 25 лет построено 240 жилых, коммерческих, социальных объектов,1,9 млн м² площадей и более 30 тыс.
+                  квартир.</p>
+                <p>Группа компаний «Терминал» — лидер в строительной отрасли</p>
+                <p>Группа компаний «Терминал» — это крупный строительный и производственный комплекс с полным циклом
+                  работ: от добычи строительных материалов до возведения современных зданий.</p>
+                <p>
+                  <b>ГК Терминал — движемся вперед, не забывая о традициях.</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <img src="./img/about-man.png" alt="" class="about__pic">
+          <div class="about__inner">
+            <div class="about__left">
+              <div class="about__sicky">
+                <p>Производственные мощности</p>
+                <p>Скорость и качество строительства</p>
+                <p>Сформированный коллектив </p>
+                <p>профессиональных строителей</p>
+                <p>Развитие и традиции</p>
+              </div>
+            </div>
+            <div class="about__right">
+              <figure>
+                <img src="./img/about-pic-1.png" alt="">
+                <figcaption>Завод по производству ЖБИ-изделий и элементов мощения, обеспечивающий нужды группы компаний
+                  и сторонних заказчиков в качественных ЖБИ-изделиях (в том числе по индивидуальным чертежам)
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./img/about-pic-2.png" alt="">
+                <figcaption>Разветвленная сеть речных портов для оптимизации логистики строительных материалов
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./img/about-pic-3.png" alt="">
+                <figcaption>Управление механизации строительства</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section company-group">
+        <div class="container company-group__container">
+          <div class="section__heading company-group__heading">
+            <h2 class="section__title company-group__title">Предприятия в группе компаний</h2>
+          </div>
+        </div>
+        <div class="section__content company-group__content">
+          <div class="swiper company-group__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide company-group__slide">
+                <div class="container company-group__slide-container">
+                  <div class="company-group__slide-logo">
+                    <img src="./img/company-group/gotx-logo.svg" alt="АО «ГОТХ»">
+                  </div>
+                  <div class="company-group__slide-info">
+                    <h3 class="company-group__slide-title">АО «ГОТХ»</h3>
+                    <div class="company-group__slide-subtitle">
+                      <p class="desktop-h5-m">Крупнейший многофункциональный транспортно-логистический комплекс</p>
+                      <p class="subtitle-r">Образован в 1947 году. Является крупнейшим транспортно-логистический
+                        комплексом в Нижегородской области. Объём принимаемых за период навигации грузов — до 5 млн
+                        тонн. Отдельное направление деятельности компании является строительство гидротехнических
+                        сооружений</p>
+                    </div>
+                    <a href="#" class="company-group__slide-link button">
+                      <span class="button__text-container" data-text="Подробнее">
+                        <span class="button__text">Подробнее</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <img class="company-group__slide-image" src="./img/company-group/slide-1.png" alt="АО «ГОТХ»">
+              </div>
+              <div class="swiper-slide company-group__slide">
+                <div class="container company-group__slide-container">
+                  <div class="company-group__slide-logo">
+                    <img src="./img/company-group/terminal-logo.svg" alt="ООО «ОЗСК»">
+                  </div>
+                  <div class="company-group__slide-info">
+                    <h3 class="company-group__slide-title">ООО «ОЗСК»</h3>
+                    <div class="company-group__slide-subtitle">
+                      <p class="desktop-h5-m">За 6 лет построено:</p>
+                      <div class="company-group__slide-stats">
+                        <div class="stats-item">
+                          <span class="stats-value">33</span>
+                          <span class="stats-label">дома</span>
+                        </div>
+                        <div class="stats-item">
+                          <span class="stats-value">211К м²</span>
+                          <span class="stats-label">площадей</span>
+                        </div>
+                        <div class="stats-item">
+                          <span class="stats-value">+ 5К</span>
+                          <span class="stats-label">квартир</span>
+                        </div>
+                      </div>
+                      <p class="subtitle-r">Построенные и строящиеся жилые комплексы: <br>Бурнаковский, Новый Бор,
+                        Корабли, Торпедо, Июль</p>
+                    </div>
+                    <a href="#" class="company-group__slide-link button">
+                      <span class="button__text-container" data-text="Подробнее">
+                        <span class="button__text">Подробнее</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <img class="company-group__slide-image" src="./img/company-group/slide-2.png" alt="ООО «ОЗСК»">
+              </div>
+              <div class="swiper-slide company-group__slide">
+                <div class="container company-group__slide-container">
+                  <div class="company-group__slide-logo">
+                    <img src="./img/current-construction/jule-logo.png" alt="ООО «АН «Терминал»">
+                  </div>
+                  <div class="company-group__slide-info">
+                    <h3 class="company-group__slide-title">ООО «АН «Терминал»</h3>
+                    <div class="company-group__slide-subtitle">
+                      <p class="desktop-h5-m">Одна из самых надежных и устойчивых риэлторских компаний в г. Нижний
+                        Новгород.</p>
+                      <p class="subtitle-r">Осуществляет свою деятельность на рынке недвижимости с 2017 года, входит в
+                        Группу Компаний «Терминал», является членом Нижегородской Гильдии Сертифицированных Риэлторов.
+                        Основным направлением деятельности организации является сотрудничество с застройщиками и
+                        продажа квартир на первичном рынке.</p>
+                    </div>
+                    <a href="#" class="company-group__slide-link button">
+                      <span class="button__text-container" data-text="Подробнее">
+                        <span class="button__text">Подробнее</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <img class="company-group__slide-image" src="./img/company-group/slide-3.png" alt="ООО «АН «Терминал»">
+              </div>
+              <div class="swiper-slide company-group__slide">
+                <div class="container company-group__slide-container">
+                  <div class="company-group__slide-logo">
+                    <img src="./img/company-group/ozsk-logo.svg" alt="ООО «ОЗСК»">
+                  </div>
+                  <div class="company-group__slide-info">
+                    <h3 class="company-group__slide-title">ООО «ОЗСК»</h3>
+                    <div class="company-group__slide-subtitle">
+                      <p class="subtitle-r">ООО «Объединенные заводы строительных конструкций» является одним из
+                        крупнейших в регионе производителем железобетонных и бетонных изделий, товарного бетона,
+                        элементов мощения.</p>
+                    </div>
+                    <a href="#" class="company-group__slide-link button">
+                      <span class="button__text-container" data-text="Подробнее">
+                        <span class="button__text">Подробнее</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <img class="company-group__slide-image" src="./img/company-group/slide-4.png" alt="ООО «ОЗСК»">
+              </div>
+              <div class="swiper-slide company-group__slide">
+                <div class="container company-group__slide-container">
+                  <div class="company-group__slide-logo">
+                    <img src="./img/company-group/gotx-logo.svg" alt="ТД «Терминал-НН»">
+                  </div>
+                  <div class="company-group__slide-info">
+                    <h3 class="company-group__slide-title">ТД «Терминал-НН»</h3>
+                    <div class="company-group__slide-subtitle">
+                      <p class="subtitle-r">Компания реализует широкий ассортимент продукции, изготовленной на
+                        производственных предприятиях группы компаний.</p>
+                      <div class="company-group__slide-grid">
+                        <div class="grid-item">
+                          <img src="./img/company-group/subtitle-icon-1.svg" alt="Минерально-строительные материалы">
+                          Минерально-строительные материалы
+                        </div>
+                        <div class="grid-item">
+                          <img src="./img/company-group/subtitle-icon-2.svg" alt="Железобетонные изделия ">
+                          Железобетонные изделия
+                        </div>
+                        <div class="grid-item">
+                          <img src="./img/company-group/subtitle-icon-3.svg" alt="Элементы мощения ">
+                          Элементы мощения
+                        </div>
+                        <div class="grid-item">
+                          <img src="./img/company-group/subtitle-icon-4.svg" alt="Транспортно-логистические услуги  ">
+                          Транспортно-логистические услуги
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#" class="company-group__slide-link button">
+                      <span class="button__text-container" data-text="Подробнее">
+                        <span class="button__text">Подробнее</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <img class="company-group__slide-image" src="./img/company-group/slide-5.png" alt="ТД «Терминал-НН»">
+              </div>
+            </div>
+            <div class="swiper-pagination container"></div>
+            <div class="company-group__slider-nav">
+              <div class="container">
+                <div class="swiper-btn swiper-button-prev"></div>
+                <div class="swiper-pagination swiper-pagination-tablet"></div>
+                <div class="swiper-btn swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="production-sections-wrapper">
+        <section class="section current-construction">
+          <div class="container current-construction__container">
+            <div class="section__content current-construction__content">
+              <div class="section__heading current-construction__heading">
+                <h2 class="section__title current-construction__title">Это мы строим прямо сейчас</h2>
+              </div>
+              <div class="current-construction__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="current-construction__slide">
+                      <img class="current-construction__slide-logo--tablet"
+                        src="./img/current-construction/jule-logo.png" alt="">
+                      <div class="current-construction__slide-media">
+                        <img class="current-construction__slide-image" src="./img/company-group/slide-1.png" alt="">
+                        <img class="current-construction__slide-logo" src="./img/current-construction/jule-logo.png"
+                          alt="">
+                        <a href="#" class="current-construction__slide-link button">
+                          <span class="button__text-container" data-text="Подробнее">
+                            <span class="button__text">Подробнее</span>
+                          </span>
+                        </a>
+                      </div>
+                      <h3 class="current-construction__slide-title">ЖК «Июль»</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="current-construction__slide">
+                      <img class="current-construction__slide-logo--tablet"
+                        src="./img/current-construction/jule-logo.png" alt="">
+                      <div class="current-construction__slide-media">
+                        <img class="current-construction__slide-image" src="./img/company-group/slide-2.png" alt="">
+                        <img class="current-construction__slide-logo" src="./img/current-construction/jule-logo.png"
+                          alt="">
+                        <a href="#" class="current-construction__slide-link button">
+                          <span class="button__text-container" data-text="Подробнее">
+                            <span class="button__text">Подробнее</span>
+                          </span>
+                        </a>
+                      </div>
+                      <h3 class="current-construction__slide-title">ЖК «Июль»</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="current-construction__slide">
+                      <img class="current-construction__slide-logo--tablet"
+                        src="./img/current-construction/jule-logo.png" alt="">
+                      <div class="current-construction__slide-media">
+                        <img class="current-construction__slide-image" src="./img/company-group/slide-3.png" alt="">
+                        <img class="current-construction__slide-logo" src="./img/current-construction/jule-logo.png"
+                          alt="">
+                        <a href="#" class="current-construction__slide-link button">
+                          <span class="button__text-container" data-text="Подробнее">
+                            <span class="button__text">Подробнее</span>
+                          </span>
+                        </a>
+                      </div>
+                      <h3 class="current-construction__slide-title">ЖК «Июль»</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="current-construction__slide">
+                      <img class="current-construction__slide-logo--tablet"
+                        src="./img/current-construction/jule-logo.png" alt="">
+                      <div class="current-construction__slide-media">
+                        <img class="current-construction__slide-image" src="./img/company-group/slide-4.png" alt="">
+                        <img class="current-construction__slide-logo" src="./img/current-construction/jule-logo.png"
+                          alt="">
+                        <a href="#" class="current-construction__slide-link button">
+                          <span class="button__text-container" data-text="Подробнее">
+                            <span class="button__text">Подробнее</span>
+                          </span>
+                        </a>
+                      </div>
+                      <h3 class="current-construction__slide-title">ЖК «Июль»</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination container"></div>
+                <div class="current-construction__slider-nav">
+                  <div class="container">
+                    <div class="swiper-btn swiper-button-prev"></div>
+                    <div class="swiper-pagination swiper-pagination-tablet"></div>
+                    <div class="swiper-btn swiper-button-next"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section location">
+          <div class="container">
+            <div class="section__heading">
+              <h2 class="section__title">Мы на карте Нижнего Новгорода</h2>
+              <div class="location__enterprises">
+                <h3 class="location__subtitle">Предприятия</h3>
+                <div class="location__list location__list--enterprises swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="location__item">
+                        <div class="location__logo">
+                          <img src="./img/location/gootx.svg" alt="АО «ГОТХ»">
+                        </div>
+                        <div class="location__info">
+                          <div class="location__name">
+                            <span>АО «ГОТХ»</span>
+                            <a href="#" class="location__website" title="Перейти на сайт">
+                              <img src="./img/icons/icon-website.svg" alt="Перейти на сайт">
+                              <img src="./img/icons/icon-website-blue.svg" alt="Перейти на сайт">
+                            </a>
+                          </div>
+                          <div class="location__address">
+                            ул. Окская Гавань, 1
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location__item">
+                        <div class="location__logo">
+                          <img src="./img/location/ozsk.svg" alt="ООО «ОЗСК»">
+                        </div>
+                        <div class="location__info">
+                          <div class="location__name">
+                            <span>ООО «ОЗСК»</span>
+                          </div>
+                          <div class="location__address">
+                            ул. Монастырка, 1
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location__item">
+                        <div class="location__logo">
+                          <img src="./img/location/terminal.svg" alt="ООО «СЗ «Терминал СК»">
+                        </div>
+                        <div class="location__info">
+                          <div class="location__name">
+                            <span>Специализированный застройщик ООО «СЗ «Терминал СК»</span>
+                          </div>
+                          <div class="location__address">
+                            проспект Ленина, 100В
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location__item">
+                        <div class="location__logo">
+                          <img src="./img/location/an_terminal.svg" alt="ООО «АН «Терминал»">
+                        </div>
+                        <div class="location__info">
+                          <div class="location__name">
+                            <span>Агентство недвижимости ООО «АН «Терминал»</span>
+                            <a href="#" class="location__website" title="Перейти на сайт">
+                              <img src="./img/icons/icon-website.svg" alt="Перейти на сайт">
+                              <img src="./img/icons/icon-website-blue.svg" alt="Перейти на сайт">
+                            </a>
+                          </div>
+                          <div class="location__address">
+                            ул. Героя Шнитникова, 1; Бурнаковская улица, 99
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location__item">
+                        <div class="location__logo">
+                          <img src="./img/location/terminal.svg" alt="ТД «Терминал»">
+                        </div>
+                        <div class="location__info">
+                          <div class="location__name">
+                            <span>ТД «Терминал»</span>
+                            <a href="#" class="location__website" title="Перейти на сайт">
+                              <img src="./img/icons/icon-website.svg" alt="Перейти на сайт">
+                              <img src="./img/icons/icon-website-blue.svg" alt="Перейти на сайт">
+                            </a>
+                          </div>
+                          <div class="location__address">
+                            ул. Монастырка, 1
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div class="location__enterprises">
+                <h3 class="location__subtitle">Строящиеся жилые комплексы</h3>
+                <div class="location__list location__list--complexes swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="location__item">
+                        <div class="location__logo">
+                          <img src="./img/location/iul.svg" alt="ЖК «ИЮЛЬ»">
+                        </div>
+                        <div class="location__info">
+                          <div class="location__name">
+                            <span>ЖК «ИЮЛЬ»</span>
+                            <a href="#" class="location__website" title="Перейти на сайт">
+                              <img src="./img/icons/icon-website.svg" alt="Перейти на сайт">
+                              <img src="./img/icons/icon-website-blue.svg" alt="Перейти на сайт">
+                            </a>
+                          </div>
+                          <div class="location__address">
+                            ул. Бурнаковская, д. 99
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location__item">
+                        <div class="location__logo">
+                          <img src="./img/location/torpedo.svg" alt="ЖК «Торпедо»">
+                        </div>
+                        <div class="location__info">
+                          <div class="location__name">
+                            <span>ЖК «Торпедо»</span>
+                          </div>
+                          <div class="location__address">
+                            ул. Героя Шнитникова, д.1
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="section section--map">
+        <div class="map-container">
+          <div id="map"></div>
+        </div>
+      </section>
+      <%= _.template(require('./../includes/components/feedback.html').default)(data) %>
+    </main>
+
+    <%= _.template(require('./../includes/footer.html').default)(data) %>
