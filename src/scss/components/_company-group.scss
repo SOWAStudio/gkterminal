@@ -2,7 +2,7 @@
     background-color: $colorBlack;
     &__heading {
         @include desktop {
-            padding: 128px 0 152px;
+            padding: 128px 0 64px;
         }
     }
     &__content {
