@@ -1,0 +1,30 @@
+.directions{
+  position: relative;
+  z-index: 2;
+  padding-bottom: 64px;
+  .container{
+    max-width: 1520px;
+    padding-inline: 0;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 31.75%;
+  }
+  &__pic{
+    width: 96px;
+    vertical-align: middle;
+  }
+  &__caption{
+    font-size: 24px;
+    color: $colorWhite;
+    line-height: 134%;
+  }
+}

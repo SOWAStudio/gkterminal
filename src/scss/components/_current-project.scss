@@ -1,0 +1,132 @@
+.current-project{
+  background: $colorBlack;
+  position: relative;
+  padding-block: 64px;
+  &__wrap{
+    display: grid;
+    grid-template-columns: minmax(40%, 648px) minmax(50%, 800px);
+    gap: 64px;
+  }
+  .container{
+    max-width: 1520px;
+    padding-inline: 0;
+  }
+  &__title{
+    margin-bottom: 64px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 115%;
+    color: $colorMain;
+  }
+  &__txt{
+    font-size: 18px;
+    line-height: 136%;
+    letter-spacing: 0.01em;
+    p{
+      margin-bottom: 32px;
+      & + ul{
+        margin-top: -16px;
+      }
+    }
+    b{
+      font-weight: 600;
+    }
+    & > div{
+      margin-bottom: 63px;
+    }
+    h2{
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 115%;
+      color: $colorMain;
+      margin-bottom: 64px;
+    }
+    h3{
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 115%;
+      color: $colorMain;
+      margin-bottom: 32px;
+    }
+    ul{
+      margin: 16px 0;
+      li{
+        font-size: 18px;
+        line-height: 136%;
+        letter-spacing: 0.01em;
+        position: relative;
+        padding-left: 34px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' fill='none'%3E%3Ccircle cx='12' cy='12.625' r='3' fill='%230076BF'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 24px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+  &__right{
+    position: relative;
+  }
+  &__slider {
+        position: sticky !important;
+        top: 25%;
+        width: 100%;
+
+        grid-column: 7 span;
+        transition: top .3s ease-in-out;
+        @media (max-width: $sm-desktop) {
+            grid-column: 6 span;
+        }
+        .swiper-wrapper {
+            height: 450px;
+            padding-bottom: 64px;
+            @include mm-desktop {
+                height: 330px;
+            }
+            @include mobile {
+                height: 397px;
+            }
+            @include only-mobile {
+                height: 310px;
+            }
+            @include xl-mobile {
+                height: 184px;
+            }
+        }
+        &-nav {
+            display: flex;
+            align-items: center;
+            column-gap: 24px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    .swiper-pagination {
+        @include xl-mobile {
+            margin-top: -45px;
+        }
+    }
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  &__item{
+    text-align: center;
+    margin-bottom: 0;
+  }
+  &__pic{
+    width: 66px;
+    height: 66px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 8px;
+  }
+  &__caption{
+    font-size: 14px;
+    line-height: 116%;
+    letter-spacing: 0.01em;
+    color: $colorWhite;
+  }
+}

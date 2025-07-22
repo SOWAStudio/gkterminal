@@ -80,6 +80,41 @@ function initProductionComplexSlider() {
     });
 }
 
+function initProjectCurrentSlider() {
+    return new Swiper('.current-project__slider', {
+        modules: [Navigation, Pagination, EffectFade, Autoplay],
+        speed: 1000,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        spaceBetween: 0,
+        loop: true,
+        effect: 'fade',
+        breakpoints: {
+            0: {
+                pagination: {
+                    el: '.current-project .swiper-pagination',
+                    type: 'bullets',
+                },
+            },
+            479: {
+                pagination: {
+                    el: '.current-project .swiper-pagination',
+                    type: 'bullets',
+                },
+            },
+            1199: {
+                slidesPerView: 1,
+            }
+        },
+        navigation: {
+            nextEl: '.current-project__slider .swiper-button-next',
+            prevEl: '.current-project__slider .swiper-button-prev',
+        },
+    });
+}
+
 function initCurrentConstructionSlider() {
     return new Swiper('.current-construction__slider', {
         modules: [Navigation, Pagination],
@@ -281,6 +316,7 @@ function initContactsSlider() {
 export function initSwipers() {
     const companyGroupSlider = initCompanyGroupSlider();
     const productionComplexSlider = initProductionComplexSlider();
+    const projectCurrentSlider = initProjectCurrentSlider();
     const currentConstructionSlider = initCurrentConstructionSlider();
     const locationSliders = initLocationSliders();
     const contactsSlider = initContactsSlider();
@@ -290,6 +326,7 @@ export function initSwipers() {
         productionComplexSlider,
         currentConstructionSlider,
         locationSliders,
+        projectCurrentSlider,
         contactsSlider
     };
 }

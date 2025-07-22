@@ -1,0 +1,15 @@
+<svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.6486 14.9906L19.875 3L27.1014 14.9906C27.6622 15.9211 26.8926 17.0857 25.8168 16.9348C24.6473 16.7707 23.89 18.1336 24.6471 19.04L31.3536 27.0696C32.2206 28.1076 31.3791 29.6726 30.035 29.5218L29.8293 29.4987C28.5041 29.3499 27.6582 30.8751 28.4861 31.9206L36.3247 41.8188C37.1034 42.8021 36.403 44.25 35.1487 44.25H19.875H4.60127C3.34696 44.25 2.64664 42.8021 3.42535 41.8188L11.2639 31.9206C12.0918 30.8751 11.2459 29.3499 9.92067 29.4987L9.715 29.5218C8.37095 29.6726 7.52942 28.1076 8.39643 27.0696L15.1029 19.04C15.86 18.1336 15.1027 16.7707 13.9332 16.9348C12.8574 17.0857 12.0878 15.9211 12.6486 14.9906Z" fill="#0076BF"/>
+<path d="M37.5 47.25L61.5 47.25" stroke="#0076BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M39 44.25L60 44.25" stroke="#0076BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M39 42L60 42" stroke="#0076BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M39 39.75L60 39.75" stroke="#0076BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40.5 38.25L40.5 47.25" stroke="#0076BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M39 47.25L39 53.25" stroke="#0076BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60 47.25L60 53.25" stroke="#0076BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M58.5 38.25L58.5 47.25" stroke="#0076BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3 63H15.5M19.6667 63H43M47.25 63H61.5" stroke="#0076BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M49.5 59.25H37M32.8333 59.25H9.5" stroke="#0076BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3 55.5C3 52.6005 5.35051 50.25 8.25 50.25H57.75C60.6495 50.25 63 52.6005 63 55.5H3Z" fill="#0076BF"/>
+<rect x="18" y="36.75" width="3.75" height="13.5" fill="#0076BF"/>
+</svg>

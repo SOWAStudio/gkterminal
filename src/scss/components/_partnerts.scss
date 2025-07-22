@@ -1,0 +1,14 @@
+.partnerts{
+  position: relative;
+  z-index: 2;
+  padding-bottom: 64px;
+  .container{
+    max-width: 1520px;
+    padding-inline: 0;
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 32px
+  }
+}

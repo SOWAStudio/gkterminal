@@ -1,0 +1,12 @@
+.current-video{
+  position: relative;
+  padding-block: 128px 64px;
+  z-index: 2;
+  .container{
+    max-width: 1520px;
+    padding-inline: 0;
+  }
+  &__title{
+    margin-bottom: 64px;
+  }
+}
