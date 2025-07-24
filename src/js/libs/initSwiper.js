@@ -80,6 +80,37 @@ function initProductionComplexSlider() {
     });
 }
 
+function initProjectSlider() {
+    return new Swiper('.project__slider', {
+        modules: [Navigation, Pagination, EffectFade, Autoplay],
+        speed: 1000,
+        spaceBetween: 0,
+        loop: true,
+        effect: 'fade',
+        breakpoints: {
+            0: {
+                pagination: {
+                    el: '.project .swiper-pagination',
+                    type: 'bullets',
+                },
+            },
+            479: {
+                pagination: {
+                    el: '.project .swiper-pagination',
+                    type: 'bullets',
+                },
+            },
+            1199: {
+                slidesPerView: 1,
+            }
+        },
+        navigation: {
+            nextEl: '.project__slider .swiper-button-next',
+            prevEl: '.project__slider .swiper-button-prev',
+        },
+    });
+}
+
 function initProjectCurrentSlider() {
     return new Swiper('.current-project__slider', {
         modules: [Navigation, Pagination, EffectFade, Autoplay],
@@ -319,6 +350,7 @@ export function initSwipers() {
     const projectCurrentSlider = initProjectCurrentSlider();
     const currentConstructionSlider = initCurrentConstructionSlider();
     const locationSliders = initLocationSliders();
+    const projectSlider = initProjectSlider();
     const contactsSlider = initContactsSlider();
 
     return {
@@ -327,6 +359,7 @@ export function initSwipers() {
         currentConstructionSlider,
         locationSliders,
         projectCurrentSlider,
+        projectSlider,
         contactsSlider
     };
 }

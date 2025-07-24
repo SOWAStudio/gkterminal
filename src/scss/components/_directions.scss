@@ -5,6 +5,12 @@
   .container{
     max-width: 1520px;
     padding-inline: 0;
+    @media (max-width: 1500px) {
+        margin: 0 50px;
+    }
+    @media (max-width: 1023px) {
+        margin: 0 24px;
+      }
   }
   &__list{
     display: flex;
@@ -17,6 +23,15 @@
     align-items: center;
     gap: 24px;
     width: 31.75%;
+    @media (max-width: 1500px) {
+        width: 30%
+      }
+    @media (max-width: 1200px) {
+      width: 48%;
+    }
+    @media (max-width: 1023px) {
+        width: 100%;
+      }
   }
   &__pic{
     width: 96px;
@@ -26,5 +41,11 @@
     font-size: 24px;
     color: $colorWhite;
     line-height: 134%;
+    @media (max-width: 1500px) {
+        font-size: 20px;
+      }
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
 }

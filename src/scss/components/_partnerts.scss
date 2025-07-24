@@ -5,10 +5,25 @@
   .container{
     max-width: 1520px;
     padding-inline: 0;
+    @media (max-width: 1500px) {
+        margin: 0 50px;
+      }
+    @media (max-width: 1023px) {
+        margin: 0 24px;
+      }
   }
   &__list{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 32px
+    gap: 32px;
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 1023px) {
+      grid-template-columns: repeat(3, 1fr);
+      }
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+      }
   }
 }

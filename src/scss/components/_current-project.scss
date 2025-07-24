@@ -6,10 +6,19 @@
     display: grid;
     grid-template-columns: minmax(40%, 648px) minmax(50%, 800px);
     gap: 64px;
+    @media (max-width: 1200px) {
+      display: block;
+    }
   }
   .container{
     max-width: 1520px;
     padding-inline: 0;
+    @media (max-width: 1500px) {
+      margin: 0 50px;
+    }
+    @media (max-width: 1023px) {
+        margin: 0 24px;
+    }
   }
   &__title{
     margin-bottom: 64px;
@@ -17,11 +26,19 @@
     font-size: 48px;
     line-height: 115%;
     color: $colorMain;
+    @media (max-width: 767px) {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
   }
   &__txt{
     font-size: 18px;
     line-height: 136%;
     letter-spacing: 0.01em;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
     p{
       margin-bottom: 32px;
       & + ul{
@@ -40,6 +57,11 @@
       line-height: 115%;
       color: $colorMain;
       margin-bottom: 64px;
+      @media (max-width: 767px) {
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 32px;
+      }
     }
     h3{
       font-weight: 600;
@@ -47,6 +69,10 @@
       line-height: 115%;
       color: $colorMain;
       margin-bottom: 32px;
+      @media (max-width: 767px) {
+        font-size: 24px;
+        font-weight: 500;
+      }
     }
     ul{
       margin: 16px 0;
@@ -61,6 +87,9 @@
         background-position: left center;
         background-size: 24px;
         margin-bottom: 4px;
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -111,6 +140,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &__item{
     text-align: center;

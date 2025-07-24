@@ -13,10 +13,25 @@
       margin-bottom: 0;
       border-bottom: 0;
     }
+    @media (max-width: 1200px) {
+        gap: 32px;
+        align-items: flex-start;
+    }
+    @media (max-width: 1023px) {
+        display: block;
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+    }
   }
   .container{
       max-width: 1520px;
       padding-inline: 0;
+      @media (max-width: 1500px) {
+      margin: 0 50px;
+    }
+    @media (max-width: 1023px) {
+        margin: 0 24px;
+    }
   }
   &__caption{
     font-weight: 600;
@@ -24,28 +39,93 @@
     line-height: 115%;
     color: $colorMain;
     margin-bottom: 64px;
+     @media (max-width: 767px) {
+       font-size: 28px;
+       margin-bottom: 32px;
+      }
   }
-  &__pic{
-    max-width: 725px;
-  }
+  &__slider {
+        max-width: 725px;
+        width: 50%;
+        margin: 0;
+        grid-column: 7 span;
+        transition: top .3s ease-in-out;
+        @media (max-width: $sm-desktop) {
+            grid-column: 6 span;
+        }
+        @media (max-width: 1023px) {
+            width: 100%;
+        }
+        .swiper-wrapper {
+            height: 450px;
+            padding-bottom: 64px;
+            @include mm-desktop {
+                height: 330px;
+            }
+            @include mobile {
+                height: 250px;
+            }
+            @include only-mobile {
+                height: 400px;
+            }
+            @include xl-mobile {
+                height: 184px;
+            }
+        }
+        &-nav {
+            display: flex;
+            align-items: center;
+            column-gap: 24px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    .swiper-pagination {
+        @include xl-mobile {
+            margin-top: -45px;
+        }
+    }
+    img{
+      object-fit: cover;
+    }
+    &__pic{
+      max-width: 725px;
+      width: 50%;
+      @media (max-width: 1023px) {
+       width: 100%;
+      }
+    }
   &__content{
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    gap: 20px;
+    gap: 32px;
     color: $colorWhite;
     align-items: flex-start;
+     @media (max-width: 1023px) {
+        margin-top: 16px;
+    }
   }
   &__title{
     font-size: 34px;
     font-weight: 600;
     color: $colorMain;
+    @media (max-width: 1200px) {
+        font-size: 24px;
+    }
   }
   &__sign{
     font-size: 18px;
     line-height: 136%;
     letter-spacing: 0.01em;
     margin-top: 16px;
+     @media (max-width: 767px) {
+        font-size: 16px;
+    }
+  }
+  &__info{
+    flex-grow: 1;
   }
   &__room{
     font-size: 18px;
@@ -58,6 +138,10 @@
     background-position: left center;
     background-size: 24px;
     margin-bottom: 16px;
+    @media (max-width: 767px) {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
   }
   &__map{
     font-size: 18px;
@@ -70,6 +154,26 @@
     background-position: left center;
     background-size: 24px;
     margin-bottom: 16px;
+     @media (max-width: 767px) {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+  }
+  &__house{
+    font-size: 18px;
+    line-height: 136%;
+    letter-spacing: 0.01em;
+    position: relative;
+    padding-left: 34px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath fill='%230076BF' d='M17.35 1H5.935c-.482.007-.94.197-1.277.529a1.712 1.712 0 0 0-.516 1.239v16.296h4.166v-.759c0-.891.585-1.59 1.33-1.59h4.01c.744 0 1.329.699 1.329 1.59v.759c.578-.002 3.648 0 4.165 0V2.768a1.712 1.712 0 0 0-.516-1.24A1.857 1.857 0 0 0 17.35 1Zm-7 13.502a.386.386 0 0 1-.12.278.42.42 0 0 1-.29.115H7.804a.42.42 0 0 1-.289-.115.386.386 0 0 1-.12-.277v-2.491c0-.104.044-.204.12-.278a.42.42 0 0 1 .29-.115H9.94a.42.42 0 0 1 .29.115c.076.074.12.174.12.278v2.49Zm0-4.4a.386.386 0 0 1-.12.278.42.42 0 0 1-.29.115H7.804a.42.42 0 0 1-.289-.115.386.386 0 0 1-.12-.278v-2.49c0-.104.044-.204.12-.278a.42.42 0 0 1 .29-.115H9.94a.42.42 0 0 1 .29.115c.076.074.12.174.12.278v2.49Zm0-4.4a.386.386 0 0 1-.12.278.42.42 0 0 1-.29.115H7.804a.42.42 0 0 1-.289-.115.386.386 0 0 1-.12-.278v-2.49c0-.104.044-.204.12-.278a.42.42 0 0 1 .29-.115H9.94a.42.42 0 0 1 .29.115c.076.074.12.174.12.278v2.49Zm5.54 8.8a.386.386 0 0 1-.12.278.42.42 0 0 1-.29.115h-2.136a.419.419 0 0 1-.288-.115.386.386 0 0 1-.12-.277v-2.491c0-.104.043-.204.12-.278a.419.419 0 0 1 .288-.115h2.136a.42.42 0 0 1 .29.115c.076.074.12.174.12.278v2.49Zm0-4.4a.386.386 0 0 1-.12.278.42.42 0 0 1-.29.115h-2.136a.419.419 0 0 1-.288-.115.386.386 0 0 1-.12-.278v-2.49c0-.104.043-.204.12-.278a.419.419 0 0 1 .288-.115h2.136a.42.42 0 0 1 .29.115c.076.074.12.174.12.278v2.49Zm0-4.4a.386.386 0 0 1-.12.278.42.42 0 0 1-.29.115h-2.136a.419.419 0 0 1-.288-.115.386.386 0 0 1-.12-.278v-2.49c0-.104.043-.204.12-.278a.419.419 0 0 1 .288-.115h2.136a.42.42 0 0 1 .29.115c.076.074.12.174.12.278v2.49ZM4.141 19.85v2.758c0 .104.044.204.12.278a.42.42 0 0 0 .29.115h3.756v-3.15H4.142Zm10.835 0V23h3.756a.419.419 0 0 0 .289-.115.386.386 0 0 0 .12-.278V19.85h-4.165Z'/%3E%3Cpath fill='%230076BF' d='M13.647 17.5h-4.01c-.24 0-.511.334-.511.805V23h5.033v-4.695c0-.471-.27-.805-.512-.805ZM8.214 3.605H9.53V5.31H8.214V3.605Zm5.54 0h1.317V5.31h-1.317V3.605Zm-5.54 4.4H9.53V9.71H8.214V8.005Zm5.54 0h1.317V9.71h-1.317V8.005Zm-5.54 4.4H9.53v1.705H8.214v-1.705Zm5.54 0h1.317v1.705h-1.317v-1.705Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px;
+    margin-bottom: 16px;
+     @media (max-width: 767px) {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
   }
   &__road{
     font-size: 18px;
@@ -82,6 +186,10 @@
     background-position: left center;
     background-size: 24px;
     margin-bottom: 16px;
+     @media (max-width: 767px) {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
   }
   &__box{
     li{
@@ -95,6 +203,9 @@
       background-position: left center;
       background-size: 24px;
       margin-bottom: 4px;
+       @media (max-width: 767px) {
+        font-size: 16px;
+    }
     }
   }
   .button{

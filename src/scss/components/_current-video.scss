@@ -2,11 +2,23 @@
   position: relative;
   padding-block: 128px 64px;
   z-index: 2;
+  @media (max-width: 767px) {
+      padding-block: 64px;
+    }
   .container{
     max-width: 1520px;
     padding-inline: 0;
+    @media (max-width: 1500px) {
+        margin: 0 50px;
+    }
+    @media (max-width: 1023px) {
+        margin: 0 24px;
+      }
   }
   &__title{
     margin-bottom: 64px;
+    @media (max-width: 767px) {
+      margin-bottom: 32px;
+    }
   }
 }

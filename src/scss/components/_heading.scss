@@ -3,6 +3,19 @@
   &__pic{
     width: 100%;
     vertical-align: middle;
+    object-fit: cover;
+    @media (max-width: 1500px) {
+       height: 450px;
+      }
+    &_large{
+      @media (max-width: 1500px) {
+        height: 900px;
+      }
+      @media (max-width: 1200px) {
+        height: 100dvh;
+        min-height: 660px;
+      }
+    }
   }
   &__content{
     position: absolute;
@@ -15,17 +28,35 @@
       border-bottom: 2px solid $colorMain;
       padding-inline: 0;
       height: 100%;
+      @media (max-width: 1500px) {
+        margin: 0 50px;
+        padding-bottom: 32px;
+      }
+      @media (max-width: 1023px) {
+        margin: 0 24px;
+      }
     }
   }
   &__title{
     margin: 32px 0 24px;
     font-size: 72px;
     font-weight: 600;
+    @media (max-width: 1200px) {
+      font-size: 56px;
+    }
+    @media (max-width: 767px) {
+      font-size: 32px;
+      font-weight: 500;
+    }
   }
   &__txt{
     font-size: 18px;
     font-weight: 600;
     color: $colorWhite;
+    @media (max-width: 767px) {
+      font-size: 16px;
+      font-weight: 500;
+    }
   }
   &__wrap{
     height: 100%;
@@ -44,10 +75,23 @@
       flex-flow: column;
       justify-content: space-between;
       gap: 20px;
+      @media (max-width: 1500px) {
+        margin: 0 50px;
+        padding-bottom: 32px;
+      }
+      @media (max-width: 1023px) {
+        margin: 0 24px;
+      }
     }
   }
   &__icon{
     width: 152px;
+    height: 140px;
+    margin-top: 32px;
+    @media (max-width: 767px) {
+      width: 122px;
+      height: 112px;
+    }
   }
   &__room{
     font-size: 18px;
@@ -59,6 +103,9 @@
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 24px;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
   &__map{
     font-size: 18px;
@@ -70,6 +117,9 @@
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 24px;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
   &__road{
     font-size: 18px;
@@ -81,6 +131,9 @@
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 24px;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
   &__box{
     flex-grow: 1;
@@ -102,5 +155,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px 24px;
+    @media (max-width: 767px) {
+      gap: 8px;
+    }
   }
 }

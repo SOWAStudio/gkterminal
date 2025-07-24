@@ -8,6 +8,7 @@ import { initFeedback } from './components/feedback';
 import { initModal } from './components/modal';
 import { initHeader } from './components/header';
 import { initContacts } from './components/contacts';
+import { initAbout } from './components/about';
 import { locations } from './data/locations';
 import initCookieNotice from './modules/cookie-notice';
 
@@ -34,6 +35,7 @@ $(document).ready(function() {
         initFeedback();
         initModal();
         initHeader();
+        initAbout();
         initCookieNotice();
     }
 
